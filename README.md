@@ -22,7 +22,7 @@ Me considero un profesional proactivo, con gran capacidad de análisis, resoluci
 
 ---
 
-## 📁 Proyectos Destacados (Ejemplos - puedes enlazar a carpetas o demos)
+## 📁 Proyectos Destacados
 
 Aquí encontrarás una muestra de los proyectos más relevantes en los que he trabajado. Cada proyecto incluye una descripción, las tecnologías utilizadas y, cuando sea posible, un enlace a una demo o al código fuente.
 
@@ -74,6 +74,6 @@ Estoy siempre abierto a nuevas oportunidades y colaboraciones. ¡No dudes en con
 * **LinkedIn:** [https://www.linkedin.com/in/hernan-lang](https://www.linkedin.com/in/hernan-lang)
 * **Email:** hernanluislang@gmail.com
 * **Mi CV Profesional:** [https://hll2975.github.io/M-Hoja-de-Vida-/](https://hll2975.github.io/M-Hoja-de-Vida-/)
-
+* **Mi Portafolio Profesional:** [https://hll2975.github.io/M-Portafolio-/](https://hll2975.github.io/M-Portafolio-/)
 
 **Gracias por visitar mi portafolio.**
