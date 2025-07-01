@@ -34,7 +34,7 @@ Aquí encontrarás una muestra de los proyectos más relevantes en los que he tr
 ### **2. Aplicaciones Web y E-commerce**
 * **Descripción:** Proyectos de desarrollo web completos, desde sitios informativos hasta tiendas en línea robustas, con enfoque en usabilidad y escalabilidad.
 * **Tecnologías:** HTML5, CSS3, JavaScript, Python (Django/Flask), WordPress, Java, .NET.
-* [Enlace a demo o código]
+* [Enlace a demo o código]ñ
 
 ### **3. Análisis de Datos y Business Intelligence**
 * **Descripción:** Implementación de pipelines ETL y creación de dashboards interactivos en Power BI, transformando datos brutos en visualizaciones claras para la toma de decisiones.
@@ -73,8 +73,7 @@ Estoy siempre abierto a nuevas oportunidades y colaboraciones. ¡No dudes en con
 
 * **LinkedIn:** [https://www.linkedin.com/in/hernan-lang](https://www.linkedin.com/in/hernan-lang)
 * **Email:** hernanluislang@gmail.com
-* **Mi CV Profesional:** [https://tusuario.github.io/tu-cv-repo/cv_hernan_lang.html](https://tusuario.github.io/tu-cv-repo/cv_hernan_lang.html) *(Recuerda actualizar esta URL con la dirección real de tu CV en GitHub Pages)*
+* **Mi CV Profesional:** [https://hll2975.github.io/M-Hoja-de-Vida-/](https://hll2975.github.io/M-Hoja-de-Vida-/)
 
----
 
 **Gracias por visitar mi portafolio.**
