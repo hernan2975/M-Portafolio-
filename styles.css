@@ -1,547 +1,303 @@
-/* Estilos Generales y Reset */
+/* Estilos Generales y Reseteo */
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Fondo suave */
+    background-color: #f4f7f6;
     color: #333;
-}
-
-.cv-header, .cv-main-content, .cv-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff; /* Fondo blanco para las secciones principales */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-/* Header */
-.cv-header {
-    background-color: #34495e; /* Azul oscuro para el encabezado */
-    color: #ecf0f1; /* Letra clara */
-    padding: 20px 40px;
-    text-align: center;
-    border-bottom: 5px solid #3498db; /* Línea azul vibrante */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', sans-serif;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Encabezado del CV */
+.cv-header {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra el contenido en el header */
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 15px;
 }
 
 .profile-photo-container {
-    width: 150px; /* Tamaño del contenedor de la imagen */
-    height: 150px; /* Mismo tamaño para hacerlo circular */
-    border-radius: 50%; /* Esto hace la forma circular */
-    overflow: hidden; /* Oculta cualquier parte de la imagen fuera del círculo */
-    border: 5px solid #ecf0f1; /* Borde alrededor de la foto */
-    box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Sombra para resaltar */
-    margin-right: 30px; /* Espacio entre la foto y el texto */
-    flex-shrink: 0; /* Evita que la foto se encoja */
+    border: 5px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Fallback */
 }
 
 .profile-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el círculo sin distorsionarse */
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-
-.name-title-group {
-    text-align: left;
-    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
-    min-width: 250px; /* Evita que el texto sea demasiado estrecho */
-}
-
-.cv-header h1 {
-    margin: 0;
-    font-size: 2.8em;
-    font-weight: 700;
+.name-title-group h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
     color: #ecf0f1;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.cv-header h2 {
-    margin: 5px 0 0;
-    font-size: 1.4em;
+.name-title-group h2 {
+    font-size: 1.2em;
     font-weight: 400;
-    color: #bdc3c7; /* Gris claro */
+    color: #bdc3c7;
 }
 
-/* Contenido Principal (Layout de 2 columnas) */
+/* Contenido Principal */
 .cv-main-content {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px; /* Espacio entre las columnas */
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .sidebar {
-    flex: 1; /* Ocupa 1 parte del espacio disponible */
-    min-width: 280px; /* Ancho mínimo para la sidebar */
-    background-color: #f8f9fa; /* Fondo más claro para la sidebar */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 30%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .main-column {
-    flex: 3; /* Ocupa 3 partes del espacio disponible */
-    min-width: 500px; /* Ancho mínimo para la columna principal */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 70%;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
-/* Estilos de Secciones */
-section {
+/* Secciones de la Barra Lateral */
+.sidebar section {
     margin-bottom: 30px;
 }
 
-section h3 {
-    font-size: 1.5em;
-    color: #2c3e50; /* Color oscuro para los títulos de sección */
-    border-bottom: 2px solid #3498db; /* Línea de separación azul */
-    padding-bottom: 8px;
+.sidebar h3 {
+    color: #1abc9c;
+    font-size: 1.4em;
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
 }
 
-section h3 i {
+.sidebar h3 .fas, .sidebar h3 .fab {
     margin-right: 10px;
-    color: #3498db; /* Icono azul */
-    font-size: 1.2em;
+    color: #fff;
 }
 
-/* Contact Info */
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info ul li {
-    margin-bottom: 8px;
-    color: #555;
-    font-size: 0.95em;
+.sidebar ul li {
+    margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
 }
 
-.contact-info ul li i {
+.sidebar ul li .fas, .sidebar ul li .fab {
     margin-right: 10px;
-    color: #3498db;
-    font-size: 1.1em;
-    flex-shrink: 0; /* Evita que el icono se encoja */
-    padding-top: 2px; /* Alineación vertical con texto */
-}
-
-.contact-info ul li a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.contact-info ul li a:hover {
-    color: #2980b9;
-    text-decoration: underline;
-}
-
-/* Soft Skills & Languages */
-.soft-skills ul, .languages ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.soft-skills ul li, .languages ul li {
-    margin-bottom: 8px;
-    color: #555;
-    font-size: 0.95em;
-    display: flex;
-    align-items: flex-start;
-}
-
-.soft-skills ul li i, .languages ul li i {
-    margin-right: 10px;
-    color: #27ae60; /* Verde para habilidades blandas/idiomas */
-    font-size: 1.1em;
+    color: #bdc3c7;
     flex-shrink: 0;
     padding-top: 2px;
 }
 
-/* Perfil Profesional */
-.profile-summary p {
-    font-size: 1em;
-    line-height: 1.7;
-    color: #444;
-    text-align: justify;
+.sidebar ul li a {
+    color: #ecf0f1;
 }
 
-/* Habilidades Técnicas (Grid) */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mínimo 200px, máximo 1fr */
-    gap: 15px; /* Espacio entre categorías de habilidades */
+.sidebar ul li a:hover {
+    color: #1abc9c;
 }
 
-.skill-category {
-    background-color: #ecf0f1; /* Fondo gris claro */
-    border-radius: 6px;
-    padding: 15px;
-    border: 1px solid #e0e6eb;
+/* Secciones de la Columna Principal */
+.main-column section {
+    margin-bottom: 30px;
 }
 
-.skill-category h4 {
-    color: #34495e;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    border-bottom: 1px solid #c2d1d9; /* Línea bajo el título de categoría */
+.main-column h3 {
+    color: #2c3e50;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #34495e;
     padding-bottom: 5px;
 }
 
-.skill-category ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.main-column h3 .fas, .main-column h3 .fab {
+    margin-right: 10px;
+    color: #34495e;
+}
+
+/* Perfil Profesional */
+.profile-summary p {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Habilidades Técnicas */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #1abc9c;
+    border-radius: 4px;
+}
+
+.skill-category h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .skill-category ul li {
     margin-bottom: 5px;
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #555;
 }
 
-/* Experiencia Laboral */
-.job-entry {
+/* Experiencia Laboral y Educación */
+.job-entry, .edu-entry {
     margin-bottom: 25px;
-    border-bottom: 1px dashed #cccccc; /* Línea discontinua */
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
 }
 
-.job-entry:last-child {
-    border-bottom: none; /* Elimina la línea en la última entrada */
+.job-entry:last-child, .edu-entry:last-child {
+    border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.job-entry h4 {
+.job-entry h4, .edu-entry h4 {
     color: #34495e;
-    margin-top: 0;
-    margin-bottom: 5px;
     font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
-.job-entry .company-date {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 10px;
+.company-date, .institution-date {
     font-style: italic;
-}
-
-.job-entry ul {
-    list-style: disc;
-    margin: 0 0 0 20px;
-    padding: 0;
-    color: #444;
-    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .job-entry ul li {
     margin-bottom: 5px;
-}
-
-/* --- NUEVOS ESTILOS: Proyectos Destacados --- */
-.featured-projects {
-    margin-bottom: 30px;
-}
-
-.featured-projects h3 {
-    margin-bottom: 15px;
-    color: #2c3e50; /* Un color oscuro para los títulos */
-    border-bottom: 2px solid #3498db; /* Línea de separación azul */
-    padding-bottom: 8px;
-}
-
-.projects-grid {
-    display: grid;
-    /* Para 3 columnas. Si el espacio no lo permite, se adaptará */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Espacio entre los proyectos */
-}
-
-.project-entry {
-    background-color: #ffffff; /* Fondo blanco para cada tarjeta de proyecto */
-    border: 1px solid #e0e0e0; /* Borde ligero */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-    transition: transform 0.2s ease-in-out; /* Animación al pasar el ratón */
-}
-
-.project-entry:hover {
-    transform: translateY(-5px); /* Efecto de "levantar" al pasar el ratón */
-}
-
-.project-entry h4 {
-    color: #34495e; /* Color oscuro para el título del proyecto */
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-.project-description {
     font-size: 0.95em;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 15px;
+    color: #444;
+    position: relative;
+    padding-left: 20px;
 }
 
-.project-links a {
-    display: inline-block; /* Para que el enlace no ocupe todo el ancho */
-    margin-right: 15px; /* Espacio entre enlaces si hay varios */
-    color: #3498db; /* Color azul para los enlaces */
-    text-decoration: none; /* Quitar subrayado por defecto */
-    font-weight: 600;
+.job-entry ul li::before {
+    content: "\2022"; /* Bullet point */
+    color: #1abc9c;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
 }
 
-.project-links a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón */
-}
-
-.project-links a i {
-    margin-right: 5px; /* Espacio entre el icono y el texto */
-}
-
-
-/* --- FIN NUEVOS ESTILOS: Proyectos Destacados --- */
-
-
-/* Educación y Certificaciones */
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 
-.edu-entry {
-    background-color: #ecf0f1;
-    border-radius: 6px;
-    padding: 15px;
-    border: 1px solid #e0e6eb;
-}
-
-.edu-entry h4 {
-    color: #34495e;
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.1em;
-}
-
-.edu-entry .institution-date {
-    color: #666;
-    font-size: 0.85em;
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
-/* Estilos para los enlaces de certificados en Educación */
-.certificate-link {
-    margin-top: 5px;
-    font-size: 0.9em;
-}
-
-.certificate-link a {
-    color: #27ae60; /* Un color verde para los enlaces de certificados */
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.certificate-link a:hover {
-    text-decoration: underline;
-}
-
-.certificate-link a i {
-    margin-left: 5px; /* Espacio entre el texto y el icono */
-    font-size: 0.8em; /* Icono un poco más pequeño */
-}
-
-
-/* Footer */
+/* Pie de Página */
 .cv-footer {
     background-color: #34495e;
     color: #ecf0f1;
     text-align: center;
     padding: 20px;
-    font-size: 0.85em;
-    border-top: 5px solid #3498db;
-    margin-top: 30px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Empuja el footer hacia abajo */
 }
 
 .cv-footer a {
-    color: #ecf0f1;
+    color: #1abc9c;
     text-decoration: none;
-    font-weight: 600;
 }
 
 .cv-footer a:hover {
     text-decoration: underline;
 }
 
-
-/* Media Queries para Responsive Design */
-@media (max-width: 900px) {
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
     .cv-main-content {
         flex-direction: column;
-        padding: 15px;
+        margin: 10px auto;
+        padding: 0;
     }
 
     .sidebar, .main-column {
-        min-width: unset; /* Quita el mínimo para permitir que se expandan */
         width: 100%;
-        margin-bottom: 20px;
-        padding: 15px;
+        padding: 20px;
     }
 
     .cv-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 20px;
+        padding: 20px 10px;
     }
 
-    .profile-photo-container {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .name-title-group {
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .cv-header h1 {
+    .name-title-group h1 {
         font-size: 2em;
     }
 
-    .cv-header h2 {
-        font-size: 1.1em;
-    }
-
-    section h3 {
-        font-size: 1.3em;
-    }
-
-    .skills-grid, .education-grid, .projects-grid {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
-        gap: 15px;
+    .name-title-group h2 {
+        font-size: 1em;
     }
 
     .profile-photo-container {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
-    .job-entry h4 {
-        font-size: 1.1em;
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
-
-
-/* Estilos para Impresión (Media Print) */
-@media print {
-    body {
-        background-color: #fff !important;
-        color: #000 !important;
-        -webkit-print-color-adjust: exact !important; /* Para Chrome */
-        print-color-adjust: exact !important; /* Para otros navegadores */
-    }
-
-    .cv-header {
-        background-color: #e0e0e0 !important; /* Un gris claro para impresión */
-        color: #000 !important;
-        border-bottom: 2px solid #a0a0a0 !important;
-        box-shadow: none !important;
-    }
-
-    .profile-photo-container {
-        border-color: #ccc !important;
-        box-shadow: none !important;
-    }
-
-    .cv-main-content {
-        flex-direction: column !important;
-        gap: 0 !important;
-        padding: 0 !important;
-    }
-
-    .sidebar, .main-column {
-        width: 100% !important;
-        flex: none !important;
-        background-color: #fff !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        padding: 10px 20px !important;
-        margin-bottom: 0 !important;
-    }
-
-    section {
-        margin-bottom: 20px !important;
-        page-break-inside: avoid; /* Evita cortar secciones en medio de una página */
-    }
-
-    section h3 {
-        color: #000 !important;
-        border-bottom: 1px solid #ccc !important;
-        padding-bottom: 5px !important;
-    }
-
-    section h3 i {
-        color: #555 !important; /* Iconos más discretos al imprimir */
-    }
-
-    .contact-info ul li i,
-    .soft-skills ul li i,
-    .languages ul li i {
-        color: #555 !important; /* Iconos más discretos al imprimir */
-    }
-
-    .contact-info ul li a {
-        color: #000 !important;
-        text-decoration: underline !important;
-    }
-
-    .skill-category, .edu-entry, .project-entry {
-        background-color: #f0f0f0 !important; /* Ligeramente gris para diferenciar */
-        border: 1px solid #e0e0e0 !important;
-        box-shadow: none !important;
-        page-break-inside: avoid; /* Intenta mantener el elemento completo en una página */
-    }
-
-    .job-entry {
-        border-bottom: 1px dashed #ddd !important;
-        padding-bottom: 10px !important;
-    }
-
-    .cv-footer {
-        background-color: #e0e0e0 !important;
-        color: #000 !important;
-        border-top: 2px solid #a0a0a0 !important;
-        margin-top: 20px !important;
-    }
-
-    .cv-footer a {
-        color: #000 !important;
-    }
-    }
