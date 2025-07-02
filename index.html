@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Hernán Luis Lang</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
     <header class="cv-header">
         <div class="header-content">
             <div class="profile-photo-container">
-                <img src="tu_foto_profesional.jpg" alt="Foto de perfil de Hernán Luis Lang" class="profile-photo">
+                <img src="{{ url_for('static', filename='tu_foto_profesional.jpg') }}" alt="Foto de perfil de Hernán Luis Lang" class="profile-photo">
             </div>
             <div class="name-title-group">
                 <h1>Hernán Luis Lang</h1>
@@ -146,30 +146,8 @@
                 </div>
 
                 <div class="job-entry">
-                    <h4>Especialista en Marketing Digital</h4>
-                    <p class="company-date">Proyectos Freelance | Enero 2021 - Actualidad</p>
-                    <ul>
-                        <li>Diseño e implementación de estrategias de contenido y campañas en redes sociales (Facebook Ads, Instagram Ads).</li>
-                        <li>Optimización de SEO en sitios web y creación de contenido orientado al posicionamiento orgánico.</li>
-                        <li>Análisis de KPIs y resultados mediante Google Analytics y herramientas de reportes.</li>
-                        <li>Creación y gestión de newsletters con Mailchimp y herramientas similares.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry">
-                    <h4>Analista Funcional</h4>
-                    <p class="company-date">Proyectos Freelance | Enero 2022 - Actualidad</p>
-                    <ul>
-                        <li>Análisis de requerimientos y elaboración de documentación funcional y técnica.</li>
-                        <li>Colaboración con equipos de desarrollo para implementar soluciones IT alineadas con los objetivos del negocio.</li>
-                        <li>Realización de pruebas funcionales y elaboración de reportes de calidad.</li>
-                        <li>Optimización de procesos organizacionales mediante el uso de herramientas colaborativas como Jira y Trello.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry">
                     <h4>Soporte Técnico IT, Analista de Infraestructura y Consultor</h4>
-                    <p class="company-date">Proyectos Freelance & Consultoría Independiente | Junio 2016 - Actualidad</p>
+                    <p class="company-date">Proyectos Freelance & Consultoría Independiente | 2013 - Actualidad</p>
                     <ul>
                         <li>Provisión de soporte técnico integral a usuarios finales y empresas (hardware, software, redes).</li>
                         <li>Análisis, diseño, implementación y administración de infraestructuras de red (LAN/WAN) y servidores (Windows/Linux).</li>
@@ -209,121 +187,100 @@
                 </div>
             </section>
 
+            <section class="projects">
+                <h3><i class="fas fa-code-branch"></i> Proyectos</h3>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="{{ url_for('static', filename='imagen_proyecto1.jpg') }}" alt="Proyecto 1">
+                        <h4>Nombre del Proyecto 1</h4>
+                        <p>Breve descripción del proyecto 1. Puedes incluir tecnologías usadas y tu rol.</p>
+                        <a href="https://github.com/tu_usuario/proyecto1" target="_blank">Ver en GitHub</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="{{ url_for('static', filename='imagen_proyecto2.jpg') }}" alt="Proyecto 2">
+                        <h4>Nombre del Proyecto 2</h4>
+                        <p>Breve descripción del proyecto 2. Destaca los logros o funcionalidades clave.</p>
+                        <a href="https://tu-sitio-proyecto2.com" target="_blank">Ver Demo</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="{{ url_for('static', filename='imagen_proyecto3.jpg') }}" alt="Proyecto 3">
+                        <h4>Nombre del Proyecto 3</h4>
+                        <p>Breve descripción del proyecto 3. Enfócate en el impacto o la solución aportada.</p>
+                        <a href="#" target="_blank">Más información</a>
+                    </div>
+                    </div>
+            </section>
+
             <section class="education">
                 <h3><i class="fas fa-graduation-cap"></i> Educación y Certificaciones</h3>
                 <div class="education-grid">
                     <div class="edu-entry">
-                        <h4>QA Testing Manual y Automatizado</h4>
-                        <p class="institution-date">Codo a Codo | 2024</p>
+                        <h4>Analista de Sistemas</h4>
+                        <p class="institution-date">Instituto Superior de Informática Virasoro | 2010 (Promedio 8.60)</p>
+                        <a href="{{ url_for('static', filename='certificados/certificado_analista.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
                     </div>
                     <div class="edu-entry">
-                        <h4>Marketing Digital Profesional</h4>
-                        <p class="institution-date">Google Digital Garage | 2021</p>
+                        <h4>QA Testing Manual y Automatizado</h4>
+                        <p class="institution-date">Codo a Codo | 2024</p>
+                        <a href="{{ url_for('static', filename='certificados/certificado_qa.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
                     </div>
                     <div class="edu-entry">
                         <h4>Python Full Stack</h4>
                         <p class="institution-date">Codo a Codo | 2020</p>
+                        <a href="{{ url_for('static', filename='certificados/certificado_python.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
                     </div>
                     <div class="edu-entry">
-                        <h4>Diplomado en Desarrollo de Sitios Web y Aplicaciones Móviles</h4>
+                        <h4>Diplomado en Desarrollo Web y Apps Móviles</h4>
                         <p class="institution-date">Fundación Slim | 2020</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>SEO y SEM Estratégico</h4>
-                        <p class="institution-date">Platzi | 2020</p>
-                    </div>
-                     <div class="edu-entry">
-                        <h4>Diplomado en Sistemas Informáticos</h4>
-                        <p class="institution-date">Fundación Slim | 2019</p>
+                        <a href="{{ url_for('static', filename='certificados/certificado_web.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
                     </div>
                     <div class="edu-entry">
                         <h4>Diplomado en Big Data</h4>
                         <p class="institution-date">Fundación Slim | 2019</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos en Tecnología de la Información para Servidor Público, Salud Digital, Protocolo de Atención y Servicio, y Técnico de Electrónica</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim; México | Enero 2019</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Tester y Curador de Datos</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim | Noviembre 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Curso de Instalador de Fibra Óptica y Cables de Cobre</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim | Noviembre 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Auxiliar Operativo, Cosecha y Cultivo de Agua, y Lavaplatos</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim | Noviembre 2018</p>
-                    </div>
-                     <div class="edu-entry">
-                        <h4>Cursos de Técnico de Redes de Datos, en Reparación e Instalación de Equipo de Cómputo y Laptops, y Reparador de Tablet y Celulares</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim; México | Octubre 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Albañil y Técnico de Informática y Ofimática</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim; México | Septiembre 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Evaluador de Indicadores Clave (KPI), Analizador de Datos y Visualizador de Big Data</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim | Julio 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Fundamentos de Programación, Programación Orientada a Objetos, Desarrollador Front End y Desarrollador Back End</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim | Junio 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Técnico de Comunicaciones Inalámbricas y Alámbricas, Diseñador de Experiencias de Usuario (UX), Administrador de Bases de Datos y Administrador de Servidores</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim | Abril 2018</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Cursos de Técnico de Seguridad Informática (Análisis de Riesgos), Asistente Web, Finder, Desarrollador de Contenido Digital y Gestor de Imagen Web</h4>
-                        <p class="institution-date">Capacitate para el Empleo; Fundación Slim; México | Marzo 2018</p>
+                        <a href="{{ url_for('static', filename='certificados/certificado_bigdata.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
                     </div>
                     <div class="edu-entry">
                         <h4>Capacitación Docente para Técnicos y Profesionales</h4>
-                        <p class="institution-date">ISFD- Macachín-La Pampa | desde Agosto de 2015</p>
-                    </div>
+                        <p class="institution-date">ISFD- Macachín-La Pampa | 2015</p>
+                        </div>
                     <div class="edu-entry">
-                        <h4>Carrera Inconclusa del Ciclo de Licenciatura en Informática Educativa</h4>
-                        <p class="institution-date">Universidad Nacional de Lanús | 2013</p>
+                        <h4>Perito Mercantil con Especialización Contable e Impositiva</h4>
+                        <p class="institution-date">I.J.B.A Alberdi P-15, Guatraché, La Pampa | 1993</p>
+                        </div>
                     </div>
-                    <div class="edu-entry">
-                        <h4>Carrera Inconclusa del Ciclo de Licenciatura en Tecnología Educativa</h4>
-                        <p class="institution-date">Universidad Tecnológica Nacional Regional Buenos Aires | 2013</p>
+            </section>
+
+            <section class="contact-form">
+                <h3><i class="fas fa-envelope"></i> Contáctame</h3>
+                <form id="contactForm" action="/submit_form" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="edu-entry">
-                        <h4>Curso de EXPLORA Razones y Verdades en Matemática</h4>
-                        <p class="institution-date">Ministerio de Educación de la Nación | 2013</p>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="edu-entry">
-                        <h4>Curso de Tutoría y Moderación en Entornos Virtuales (Moodle)</h4>
-                        <p class="institution-date">Ministerio de Educación de la Nación | 2013</p>
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" required>
                     </div>
-                    <div class="edu-entry">
-                        <h4>Curso de Hacking Ético y Seguridad Informática</h4>
-                        <p class="institution-date">UTN-Regional Bs.As. | 2012-2013</p>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <div class="edu-entry">
-                        <h4>Seminario de Redes Sociales Aplicadas al Aula</h4>
-                        <p class="institution-date">Ministerio de Educación de la Nación | 2013</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Curso de "Diversidad y Estrategias de Aprendizaje"</h4>
-                        <p class="institution-date">Prof. Lorena Stepanosky, Univ. Nacional del Comahue | Mayo 2013</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Curso de "Selección y Evaluación de Medios Educativos"</h4>
-                        <p class="institution-date">Lic. Julia Palmieri, Univ. Nacional de Cuyo | 2011</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Analista de Sistemas</h4>
-                        <p class="institution-date">Instituto Superior de Informática Virasoro | 2010 (Promedio 8.60)</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Curso de "Inteligencias Múltiples-Estrategias Áulicas"</h4>
-                        <p class="institution-date">Lic. Julia Palmieri, Univ. Nacional de Cuyo | 2010</p>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Curso de Set de Cine (Realización de un Cortometraje)</h4>
-                        <p class="institution-dat
+                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                    <div id="form-response" class="hidden"></div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer class="cv-footer">
+        <p>&copy; 2025 Hernán Luis Lang. Todos los derechos reservados. | Diseñado con HTML5 y CSS3.</p>
+        <p>Visita mi <a href="https://github.com/hll2975" target="_blank">GitHub</a> y <a href="https://www.linkedin.com/in/hernan-lang" target="_blank">LinkedIn</a>.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+    </html>
