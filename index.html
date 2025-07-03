@@ -3,284 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Hernán Luis Lang</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hernán Luis Lang - Especialista IT & Desarrollador de Soluciones</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="cv-header">
-        <div class="header-content">
-            <div class="profile-photo-container">
-                <img src="{{ url_for('static', filename='tu_foto_profesional.jpg') }}" alt="Foto de perfil de Hernán Luis Lang" class="profile-photo">
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-header-personal">
+                <div class="hero-title-group">
+                    <h1 class="hero-name">Hernán Luis Lang</h1>
+                    <h2 class="hero-profession">Especialista IT & Desarrollador de Soluciones</h2>
+                </div>
+                <div class="hero-image-container">
+                    <img src="https://via.placeholder.com/200/cccccc/ffffff?text=Tu+Foto" alt="Foto de Perfil de Hernán Luis Lang" class="hero-profile-pic">
+                </div>
             </div>
-            <div class="name-title-group">
-                <h1>Hernán Luis Lang</h1>
-                <h2>Analista en Sistemas & Desarrollador de Soluciones IT</h2>
+            <p class="hero-intro">Soy **Analista en Sistemas** con amplia experiencia en el sector IT, brindando **soporte técnico integral** desde Nivel 1 hasta Nivel 3. Mi expertise abarca la instalación y mantenimiento de servidores, bases de datos e infraestructura, así como una diversa gama de equipos informáticos. Complementando mi perfil, me especialicé en **desarrollo web**, creando soluciones como tiendas online y landing pages. Recientemente, enfoqué mi trabajo en la **consultoría, análisis e implementación de módulos en Python, con énfasis en Odoo**, para optimizar procesos de negocio. Estoy comprometido con ofrecer soluciones robustas y personalizadas que impulsen el crecimiento de comercios, productores agropecuarios, profesionales y PyMEs.</p>
+            <div class="hero-actions">
+                <a href="#proyectos" class="btn btn-primary">Ver Mis Trabajos</a>
+                <a href="Hernan_Luis_Lang_CV.pdf" target="_blank" class="btn btn-secondary">Descargar CV</a>
+                <a href="https://www.linkedin.com/in/hern%C3%A1n-luis-lang/" target="_blank" class="btn btn-secondary">Conectar en LinkedIn</a>
             </div>
         </div>
     </header>
 
-    <div class="cv-main-content">
-        <aside class="sidebar">
-            <section class="contact-info">
-                <h3><i class="fas fa-address-card"></i> Contacto</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Primera Junta 257 (L6311), Guatraché, La Pampa, Argentina</li>
-                    <li><i class="fas fa-phone-alt"></i> +54 9 2923 507118</li>
-                    <li><i class="fas fa-envelope"></i> hernanluislang@gmail.com</li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hernan-lang" target="_blank">linkedin.com/in/hernan-lang</a></li>
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/hll2975" target="_blank">github.com/hll2975</a></li>
-                </ul>
-            </section>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Hernán Lang</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="burger" id="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
 
-            <section class="soft-skills">
-                <h3><i class="fas fa-star"></i> Habilidades Blandas</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Pensamiento Analítico y Crítico</li>
-                    <li><i class="fas fa-check-circle"></i> Resolución de Problemas Complejos</li>
-                    <li><i class="fas fa-check-circle"></i> Comunicación Efectiva</li>
-                    <li><i class="fas fa-check-circle"></i> Trabajo en Equipo y Colaboración</li>
-                    <li><i class="fas fa-check-circle"></i> Adaptabilidad y Aprendizaje Continuo</li>
-                    <li><i class="fas fa-check-circle"></i> Proactividad y Autonomía</li>
-                    <li><i class="fas fa-check-circle"></i> Atención al Detalle</li>
-                    <li><i class="fas fa-check-circle"></i> Orientación al Cliente</li>
-                </ul>
-            </section>
-
-            <section class="languages">
-                <h3><i class="fas fa-language"></i> Idiomas</h3>
-                <ul>
-                    <li><i class="fas fa-globe"></i> Inglés: Lectura avanzada, Intermedio (hablado y escrito)</li>
-                    <li><i class="fas fa-globe"></i> Español: Nativo</li>
-                </ul>
-            </section>
-        </aside>
-
-        <main class="main-column">
-            <section class="profile-summary">
-                <h3><i class="fas fa-user-circle"></i> Perfil Profesional</h3>
-                <p>Analista en Sistemas con una sólida y versátil trayectoria en el sector IT. Especialista en **soporte técnico integral**, **administración de infraestructura** y **desarrollo de soluciones de software**. Con experiencia reciente en **Python para Odoo**, **desarrollo web (frontend y backend)**, **análisis de datos (ETL y Power BI)** y **QA Testing**. Orientado a la resolución de problemas complejos y la mejora continua, buscando constantemente la aplicación estratégica de soluciones tecnológicas para impulsar la eficiencia y el crecimiento.</p>
-            </section>
-
-            <section class="technical-skills">
-                <h3><i class="fas fa-laptop-code"></i> Habilidades Técnicas</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Lenguajes de Programación</h4>
-                        <ul>
-                            <li>Python (Semi-Senior)</li>
-                            <li>SQL</li>
-                            <li>HTML, CSS, JavaScript</li>
-                            <li>Java</li>
-                            <li>C#, VB.NET</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Frameworks y Plataformas</h4>
-                        <ul>
-                            <li>Odoo</li>
-                            <li>Django, Flask</li>
-                            <li>.NET (Framework/Core)</li>
-                            <li>WordPress</li>
-                            <li>Spring</li>
-                            <li>Vue.js</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Bases de Datos</h4>
-                        <ul>
-                            <li>PostgreSQL</li>
-                            <li>MySQL</li>
-                            <li>SQL Server</li>
-                            <li>SQLite</li>
-                            <li>Access</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>BI y Datos</h4>
-                        <ul>
-                            <li>Power BI</li>
-                            <li>Procesos ETL</li>
-                            <li>Pandas, NumPy</li>
-                            <li>Excel Avanzado</li>
-                            <li>Tableau</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Sistemas e Infraestructura</h4>
-                        <ul>
-                            <li>Windows Server, Linux</li>
-                            <li>Redes LAN/WAN</li>
-                            <li>Active Directory, Exchange</li>
-                            <li>Virtualización</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>QA y Herramientas</h4>
-                        <ul>
-                            <li>Pruebas Manuales/Automatizadas</li>
-                            <li>Jira, Trello</li>
-                            <li>Git</li>
-                            <li>Visual Studio, PyCharm</li>
-                            <li>IntelliJ IDEA</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="work-experience">
-                <h3><i class="fas fa-briefcase"></i> Experiencia Laboral</h3>
-
-                <div class="job-entry">
-                    <h4>Desarrollador Full Stack & Analista de Datos</h4>
-                    <p class="company-date">Proyectos Freelance | Julio 2020 - Actualidad</p>
-                    <ul>
-                        <li>Diseño y desarrollo de aplicaciones web (Python/Django, HTML, CSS, JavaScript) e implementación de APIs RESTful.</li>
-                        <li>Análisis de datos, diseño de pipelines ETL y creación de dashboards en Power BI para la toma de decisiones.</li>
-                        <li>Automatización de procesos mediante scripts en Python, optimizando flujos de trabajo empresariales.</li>
-                        <li>Gestión y mantenimiento de bases de datos MySQL y SQL Server.</li>
-                        <li>Asesoramiento y desarrollo de sitios web para clientes.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry">
-                    <h4>Soporte Técnico IT, Analista de Infraestructura y Consultor</h4>
-                    <p class="company-date">Proyectos Freelance & Consultoría Independiente | 2013 - Actualidad</p>
-                    <ul>
-                        <li>Provisión de soporte técnico integral a usuarios finales y empresas (hardware, software, redes).</li>
-                        <li>Análisis, diseño, implementación y administración de infraestructuras de red (LAN/WAN) y servidores (Windows/Linux).</li>
-                        <li>Gestión de servicios de directorio (Active Directory) y soluciones de correo (Exchange).</li>
-                        <li>Consultoría en selección e implementación de soluciones tecnológicas y recuperación de datos.</li>
-                        <li>Mantenimiento preventivo/correctivo y optimización de sistemas IT para garantizar la continuidad operativa.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry">
-                    <h4>QA Tester Junior</h4>
-                    <p class="company-date">Prácticas y Proyectos Personales | 2024</p>
-                    <ul>
-                        <li>Diseño y ejecución de casos de prueba manuales y automatizados para entornos web y móviles.</li>
-                        <li>Documentación y reporte de errores utilizando herramientas como Jira y Trello.</li>
-                        <li>Pruebas funcionales para asegurar la calidad del software.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry">
-                    <h4>Auxiliar de Soporte Informático</h4>
-                    <p class="company-date">Cooperativa y Mutual La Emancipación | Enero 2021 - Febrero 2022</p>
-                    <ul>
-                        <li>Administración y configuración de redes LAN/WAN y servidores (Windows/Linux).</li>
-                        <li>Resolución de incidencias técnicas en sistemas ERP y CRM, y gestión de Active Directory y Exchange.</li>
-                        <li>Desarrollo de herramientas internas para automatización de tareas administrativas.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry">
-                    <h4>Experiencia Previa Variada (Síntesis)</h4>
-                    <p class="company-date">Diversas Empresas y Roles | 1993 - 2016</p>
-                    <ul>
-                        <li>Experiencia en roles de soporte, administrativo, y operario en diversos sectores (metalúrgica, seguridad, servicios).</li>
-                        <li>Desarrollo de habilidades en gestión de equipos, atención al cliente y resolución práctica de problemas.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h3><i class="fas fa-code-branch"></i> Proyectos</h3>
-                <div class="project-grid">
-                    <div class="project-item">
-                        <img src="{{ url_for('static', filename='imagen_proyecto1.jpg') }}" alt="Proyecto 1">
-                        <h4>Nombre del Proyecto 1</h4>
-                        <p>Breve descripción del proyecto 1. Puedes incluir tecnologías usadas y tu rol.</p>
-                        <a href="https://github.com/tu_usuario/proyecto1" target="_blank">Ver en GitHub</a>
-                    </div>
-                    <div class="project-item">
-                        <img src="{{ url_for('static', filename='imagen_proyecto2.jpg') }}" alt="Proyecto 2">
-                        <h4>Nombre del Proyecto 2</h4>
-                        <p>Breve descripción del proyecto 2. Destaca los logros o funcionalidades clave.</p>
-                        <a href="https://tu-sitio-proyecto2.com" target="_blank">Ver Demo</a>
-                    </div>
-                    <div class="project-item">
-                        <img src="{{ url_for('static', filename='imagen_proyecto3.jpg') }}" alt="Proyecto 3">
-                        <h4>Nombre del Proyecto 3</h4>
-                        <p>Breve descripción del proyecto 3. Enfócate en el impacto o la solución aportada.</p>
-                        <a href="#" target="_blank">Más información</a>
-                    </div>
-                    </div>
-            </section>
-
-            <section class="education">
-                <h3><i class="fas fa-graduation-cap"></i> Educación y Certificaciones</h3>
-                <div class="education-grid">
-                    <div class="edu-entry">
-                        <h4>Analista de Sistemas</h4>
-                        <p class="institution-date">Instituto Superior de Informática Virasoro | 2010 (Promedio 8.60)</p>
-                        <a href="{{ url_for('static', filename='certificados/certificado_analista.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>QA Testing Manual y Automatizado</h4>
-                        <p class="institution-date">Codo a Codo | 2024</p>
-                        <a href="{{ url_for('static', filename='certificados/certificado_qa.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Python Full Stack</h4>
-                        <p class="institution-date">Codo a Codo | 2020</p>
-                        <a href="{{ url_for('static', filename='certificados/certificado_python.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Diplomado en Desarrollo Web y Apps Móviles</h4>
-                        <p class="institution-date">Fundación Slim | 2020</p>
-                        <a href="{{ url_for('static', filename='certificados/certificado_web.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Diplomado en Big Data</h4>
-                        <p class="institution-date">Fundación Slim | 2019</p>
-                        <a href="{{ url_for('static', filename='certificados/certificado_bigdata.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i> Ver Certificado</a>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Capacitación Docente para Técnicos y Profesionales</h4>
-                        <p class="institution-date">ISFD- Macachín-La Pampa | 2015</p>
+    <main class="container">
+        <section id="proyectos" class="section projects-section">
+            <h2 class="section-title">Mis Trabajos y Proyectos</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250?text=Odoo+Implementacion" alt="Módulos de Odoo personalizados" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Desarrollo e Implementación de Módulos Odoo</h3>
+                        <p class="project-description">Análisis, diseño y desarrollo de módulos personalizados en Odoo (ERP/CRM) para optimizar flujos de trabajo específicos en PyMEs y productores agropecuarios. Integración con sistemas existentes y mejora de la gestión empresarial.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Odoo</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
-                    <div class="edu-entry">
-                        <h4>Perito Mercantil con Especialización Contable e Impositiva</h4>
-                        <p class="institution-date">I.J.B.A Alberdi P-15, Guatraché, La Pampa | 1993</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/hll2975/ejemplo-modulo-odoo" target="_blank" class="btn btn-link"><i class="fab fa-github"></i> Ver Código Base</a>
                         </div>
                     </div>
-            </section>
+                </div>
 
-            <section class="contact-form">
-                <h3><i class="fas fa-envelope"></i> Contáctame</h3>
-                <form id="contactForm" action="/submit_form" method="POST">
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250?text=Tienda+Online+Local" alt="Captura de pantalla de una tienda online" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Tienda Online y Landing Pages Comerciales</h3>
+                        <p class="project-description">Creación de plataformas de e-commerce y landing pages responsivas para comercios y profesionales. Diseño centrado en la experiencia del usuario y optimización para conversión, con pasarelas de pago y gestión de productos.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django/Flask</span>
+                            <span class="tech-tag">HTML/CSS/JS</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="btn btn-link"><i class="fas fa-external-link-alt"></i> Ver Demo (Ficticio)</a>
+                            <a href="https://github.com/hll2975/ejemplo-ecommerce-python" target="_blank" class="btn btn-link"><i class="fab fa-github"></i> Ver Código Base</a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Asunto:</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Enviar Mensaje</button>
-                    <div id="form-response" class="hidden"></div>
-                </form>
-            </section>
-        </main>
-    </div>
+                </div>
 
-    <footer class="cv-footer">
-        <p>&copy; 2025 Hernán Luis Lang. Todos los derechos reservados. | Diseñado con HTML5 y CSS3.</p>
-        <p>Visita mi <a href="https://github.com/hll2975" target="_blank">GitHub</a> y <a href="https://www.linkedin.com/in/hernan-lang" target="_blank">LinkedIn</a>.</p>
-    </footer>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250?text=Log+Optimizer+CLI" alt="Imagen de terminal con líneas de comando" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Herramienta CLI de Optimización de Archivos de Logs</h3>
+                        <p class="project-description">Herramienta de línea de comandos (CLI) desarrollada en Python para analizar, filtrar y optimizar archivos de logs de servidores. Permite identificar patrones de errores y generar resúmenes estadísticos.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Click</span>
+                            <span class="tech-tag">RegEx</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/hll2975/log-optimizer-cli" target="_blank" class="btn btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-    </html>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250?text=Inventario+VB.NET" alt="Captura de pantalla de una aplicación de escritorio" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Sistema de Gestión de Inventario (VB.NET)</h3>
+                        <p class="project-description">Aplicación de escritorio básica para la gestión de inventario de pequeños comercios. Permite registrar productos, actualizar stock y generar reportes simples. Desarrollado con enfoque en la usabilidad.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Visual Basic .NET</span>
+                            <span class="tech-tag">SQL Server (LocalDB)</span>
+                            <span class="tech-tag">Windows Forms</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/hll2975/ejemplo-inventario-vbnet" target="_blank" class="btn btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250?text=API+Csharp" alt="Diagrama de API RESTful" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">API RESTful para Gestión de Clientes (C#)</h3>
+                        <p class="project-description">Pequeña API RESTful desarrollada en C# (.NET Core) para la gestión de datos de clientes. Proporciona endpoints para operaciones CRUD básicas. Demuestra conocimientos en el desarrollo de servicios web.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET Core</span>
+                            <span class="tech-tag">RESTful API</span>
+                            <span class="tech-tag">Entity Framework</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/hll2975/ejemplo-api-csharp" target="_blank" class="btn btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250?text=Landing+Page+Empresa" alt="Captura de pantalla de una landing page" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Sitio Web y Landing Page para Negocio Local</h3>
+                        <p class="project-description">Diseño y desarrollo de un sitio web informativo y una landing page optimizada para la captura de leads, dirigida a un negocio de servicios en la zona. Enfocado en el atractivo visual y la llamada a la acción.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Diseño Web</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="btn btn-link"><i class="fas fa-external-link-alt"></i> Ver Demo (Ficticio)</a>
+                            <a href="https://github.com/hll2975/ejemplo-landing-page" target="_blank" class="btn btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="habilidades" class="section skills-section">
+            <h2 class="section-title">Mis Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+                    <ul>
+                        <li>**Python** (Junior a Semi-Senior)</li>
+                        <li>SQL (PostgreSQL, MySQL, SQL Server)</li>
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>Visual Basic .NET (Junior)</li>
+                        <li>C# (Junior)</li>
+                        <li>XML</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-puzzle-piece"></i> Frameworks & Plataformas</h3>
+                    <ul>
+                        <li>**Odoo** (Desarrollo de módulos, Implementación)</li>
+                        <li>Django, Flask (Desarrollo Web Python)</li>
+                        <li>FastAPI (APIs RESTful)</li>
+                        <li>.NET Core (C#)</li>
+                        <li>Windows Forms (VB.NET)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Infraestructura & SO</h3>
+                    <ul>
+                        <li>Administración de Servidores (Windows Server, Linux)</li>
+                        <li>Instalación y Mantenimiento de Hardware</li>
+                        <li>Configuración de Redes (LAN, WAN, VPN)</li>
+                        <li>Virtualización (Hyper-V, VMware)</li>
+                        <li>Equipos de Cómputo e Impresoras</li>
+                        <li>Colectoras de Datos</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>SQL Server</li>
+                        <li>Administración y Optimización</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Datos & BI</h3>
+                    <ul>
+                        <li>**Power BI** (Visualización y Análisis)</li>
+                        <li>Extracción y Transformación de Datos</li>
+                        <li>Reportes y Dashboards</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-flask"></i> QA & Testing</h3>
+                    <ul>
+                        <li>Testing Manual (Nivel Junior)</li>
+                        <li>Testing Automático (Nivel Junior)</li>
+                        <li>Casos de Prueba y Reporte de Bugs</li>
+                    </ul>
+                </div>
+                 <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud (Conocimiento Teórico)</h3>
+                    <ul>
+                        <li>Conceptos de AWS</li>
+                        <li>Conceptos de Azure</li>
+                        <li>Infraestructura como Servicio (IaaS)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-headset"></i> Soporte IT & Consultoría</h3>
+                    <ul>
+                        <li>Soporte Técnico Nivel 1, 2 y 3</li>
+                        <li>Asistencia a Usuarios (comercios, agro, profesionales, PyMEs)</li>
+                        <li>Análisis y Consultoría de Sistemas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="soft-skills">
+                <h3><i class="fas fa-handshake"></i> Habilidades Blandas</h3>
+                <ul>
+                    <li>Resolución de Problemas</li>
+                    <li>Comunicación Efectiva (con usuarios técnicos y no técnicos)</li>
+                    <li>Orientación al Cliente y Adaptabilidad</li>
+                    <li>Proactividad y Autogestión</li>
+                    <li>Capacidad de Análisis y Diagnóstico</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="certificaciones" class="section certifications-section">
+            <h2 class="section-title">Formación y Certificaciones</h2>
+            <div class="certification-grid-20">
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=Analista+Sistemas" alt="Certificado Analista en Sistemas" class="cert-logo-large">
+                    <h3 class="cert-name">Analista en Sistemas</h3>
+                    <p class="cert-date">Graduado: 2010</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=Odoo+Functional" alt="Certificado Odoo Functional" class="cert-logo-large">
+                    <h3 class="cert-name">Odoo Functional Training</h3>
+                    <p class="cert-date">2022</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=Python+PCEP" alt="Certificado PCEP Python" class="cert-logo-large">
+                    <h3 class="cert-name">Python Certified Entry-Level Programmer (PCEP)</h3>
+                    <p class="cert-date">2023</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=PowerBI+Cert" alt="Certificado Power BI" class="cert-logo-large">
+                    <h3 class="cert-name">Fundamentos de Power BI</h3>
+                    <p class="cert-date">2024</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=QA+Testing" alt="Certificado QA Testing" class="cert-logo-large">
+                    <h3 class="cert-name">Introducción a QA y Testing</h3>
+                    <p class="cert-date">2023</p>
+                </div>
+                <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=Curso+18" alt="Certificado 18" class="cert-logo-large">
+                    <h3 class="cert-name">Curso Relevante 18</h3>
+                    <p class="cert-date">Fecha</p>
+                </div>
+                 <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=Curso+19" alt="Certificado 19" class="cert-logo-large">
+                    <h3 class="cert-name">Curso Relevante 19</h3>
+                    <p class="cert-date">Fecha</p>
+                </div>
+                 <div class="certification-card">
+                    <img src="https://via.placeholder.com/150?text=Curso+20" alt="Certificado 20" class="cert-logo-large">
+                    <h3 class="cert-name">Curso Relevante 20</h3>
+                    <p class="cert-date">Fecha</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section contact-section">
+            <h2 class="section-title">Conversemos sobre Tu Próximo Desafío.</h2>
+            <p class="contact-intro">Estoy disponible para ofrecerte soluciones IT personalizadas o para integrarme a tu equipo de desarrollo. ¡Contáctame!</p>
+
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form action="/submit_form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Datos de Contacto</h3>
+                    <ul>
+                        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/her
