@@ -1,0 +1,38 @@
+# Directorio de módulos de Node.js
+node_modules/
+
+# Archivos de entorno y configuración sensible
+.env
+.DS_Store # Archivos de sistema de macOS
+npm-debug.log* # Archivos de depuración de npm
+
+# Archivos de registro y caché
+*.log
+.nyc_output/
+.tmp/
+.cache/
+
+# Archivos de datos temporales
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de respaldo y temporales de editores
+*~
+*.swp
+.idea/
+.vscode/
+
+# Archivos generados por el sistema operativo
+Thumbs.db # Archivos de miniaturas de Windows
+
+# Documentos PDF (si son temporales o se generan automáticamente)
+# Si tus PDFs son parte del contenido estático y quieres que estén en Git,
+# BORRA O COMENTA las siguientes líneas.
+# Actualmente, el CV y los diplomas sí deben estar en el repo, así que esta línea no es necesaria
+# si tu carpeta 'documentos' contiene PDFs que quieres versionar.
+# documentos/*.pdf
+
+# Archivos específicos de entornos de despliegue (ej. Netlify, Vercel)
+.netlify/
+.vercel/
