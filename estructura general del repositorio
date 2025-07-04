@@ -1,0 +1,27 @@
+Estructura Completa del Repositorio de tu Portafolio
+Esta es la organización de archivos y carpetas que recomiendo para tu proyecto, permitiendo tanto un portafolio estático como la base para funcionalidades de backend (como el envío de formularios de contacto).
+
+tu_portafolio/
+├── .env                  # Almacena variables de entorno sensibles (claves API, credenciales).
+├── .gitignore            # Indica a Git qué archivos y carpetas debe ignorar (ej. .env, entornos virtuales).
+├── README.md             # Documentación principal del proyecto: descripción, configuración, uso.
+├── requirements.txt      # Lista las dependencias de Python del proyecto (para 'pip install -r').
+├── app.py                # Contiene la lógica principal de tu aplicación Python (ej. Flask para el backend del formulario).
+├── index.html            # La página principal de tu portafolio con la estructura del contenido.
+├── styles.css            # Define el diseño y la apariencia visual de tu portafolio.
+├── script.js             # Añade interactividad al frontend (ej. menú hamburguesa, animaciones).
+├── templates/            # (Opcional, pero recomendado si usas Flask/Django) Contiene plantillas HTML.
+│   └── index.html        # Tu archivo index.html se movería aquí si usas Flask.
+├── static/               # (Opcional, pero recomendado si usas Flask/Django) Contiene assets estáticos.
+│   ├── images/           # Carpeta para todas las imágenes del sitio.
+│   │   ├── tu_foto_profesional.jpg
+│   │   ├── logo_utn.png
+│   │   ├── logo_coderhouse.png
+│   │   └── ... (otras imágenes de proyectos, iconos, etc.)
+│   └── documents/        # Carpeta para documentos PDF (CV, certificados).
+│       ├── Hernan_Luis_Lang_CV.pdf
+│       ├── analista_sistemas_titulo.pdf
+│       ├── desarrollo_web_diploma.pdf
+│       ├── redes_especializacion.pdf
+│       └── ... (todos tus otros PDFs)
+└── venv/                 # (Ignorado por Git) Entorno virtual de Python para aislar dependencias.
