@@ -26,6 +26,8 @@ body {
     color: var(--text-color-dark);
     background-color: var(--background-light);
     scroll-behavior: smooth;
+    /* Evita el scroll horizontal en dispositivos móviles */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -98,7 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
+    /* Usar funciones CSS como color-mix para oscurecer de forma nativa */
+    background-color: color-mix(in srgb, var(--primary-color) 90%, black);
     box-shadow: 0 4px 8px var(--shadow-light);
 }
 
@@ -132,7 +135,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-link:hover {
     text-decoration: underline;
-    color: darken(var(--primary-color), 10%);
+    /* Usar funciones CSS como color-mix para oscurecer de forma nativa */
+    color: color-mix(in srgb, var(--primary-color) 90%, black);
 }
 
 /* --- Header / Hero Section --- */
@@ -158,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-header-personal {
     display: flex;
-    flex-direction: column; /* Por defecto vertical */
+    flex-direction: column; /* Por defecto vertical en móviles */
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
@@ -203,6 +207,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
     margin-left: auto;
     margin-right: auto;
+    text-align: justify; /* Justifica el texto para mejor lectura */
+    hyphens: auto; /* Permite la división de palabras si el navegador lo soporta */
 }
 
 .hero-actions {
@@ -423,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-category li::before {
     content: '\f00c'; /* Icono de checkmark */
-    font-family: "Font Awesome 5 Free"; /* O "Font Awesome 6 Free" si usas la v6 */
+    font-family: "Font Awesome 6 Free"; /* Ajustado para v6 que es la que se usa en tu HTML */
     font-weight: 900; /* Para que el icono sea sólido */
     color: var(--accent-color);
     position: absolute;
@@ -501,6 +507,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-align: justify; /* Justifica el texto */
+    hyphens: auto;
 }
 
 .contact-content {
@@ -627,12 +635,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Media Queries para Responsividad --- */
 
-/* Tablet y dispositivos medianos */
+/* Pantallas muy grandes (desktop XL) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px; /* Permite que el contenido se extienda un poco más */
+    }
+}
+
+/* Tablet y dispositivos medianos (landscape tablets, small desktops) */
 @media (min-width: 768px) {
     .hero-header-personal {
         flex-direction: row; /* Horizontal en pantallas más grandes */
         text-align: left;
-        justify-content: center;
+        justify-content: center; /* Centrar para mantener el contenido centrado en la sección hero */
+        align-items: center; /* Asegura que los ítems estén alineados verticalmente */
     }
 
     .hero-title-group {
@@ -641,14 +657,26 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-image-container {
         order: 1; /* Pone la imagen a la derecha */
+        margin-left: 30px; /* Espacio entre el texto y la imagen */
     }
 
     .hero-title-group {
         order: 0; /* Pone el texto a la izquierda */
     }
+
+    /* Ajuste para el texto del hero en pantallas medianas */
+    .hero-intro {
+        text-align: center; /* Vuelve a centrar el texto introductorio en desktop */
+    }
+
+    /* Ajuste para botones del hero, para que no se separen demasiado */
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: nowrap; /* Evita que los botones se envuelvan si hay espacio suficiente */
+    }
 }
 
-/* Teléfonos y dispositivos pequeños */
+/* Teléfonos y dispositivos pequeños (portrait phones, small tablets) */
 @media (max-width: 767px) {
     .hero {
         padding: 80px 0 50px;
@@ -665,16 +693,24 @@ h1, h2, h3, h4, h5, h6 {
     .hero-intro {
         font-size: 1.05em;
         margin-bottom: 30px;
+        text-align: center; /* Centrar el texto en móviles */
     }
 
     .hero-actions {
         flex-direction: column;
         gap: 15px;
+        align-items: center; /* Centra los botones cuando están en columna */
     }
 
     .hero-actions .btn {
-        width: 100%;
-        max-width: 300px;
+        width: 90%; /* Hace que los botones sean casi de ancho completo */
+        max-width: 300px; /* Limita el ancho máximo para que no sean demasiado grandes */
+    }
+
+    .hero-image-container {
+        width: 150px; /* Reduce un poco el tamaño de la foto en móviles */
+        height: 150px;
+        margin-bottom: 20px; /* Espacio debajo de la imagen en móviles */
     }
 
     .navbar .logo {
@@ -752,9 +788,47 @@ h1, h2, h3, h4, h5, h6 {
     .contact-form,
     .contact-info {
         padding: 30px;
+        min-width: unset; /* Elimina el min-width en móviles si causa problemas */
     }
 
     .contact-info li {
         justify-content: center; /* Centra los íconos y texto */
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (iPhone SE, etc.) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9em; /* Reduce el tamaño base de la fuente un poco más */
+    }
+
+    .container {
+        padding: 0 15px; /* Reduce el padding lateral */
+    }
+
+    .hero-name {
+        font-size: 2em; /* Título aún más pequeño */
+    }
+
+    .hero-profession {
+        font-size: 1.2em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 10px 20px; /* Reduce el padding de los botones */
+        font-size: 0.9em;
+    }
+
+    .navbar .logo {
+        font-size: 1.3em;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 20px; /* Reduce el padding en las secciones de contacto */
     }
 }
