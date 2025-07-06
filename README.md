@@ -73,7 +73,7 @@ Estoy siempre abierto a nuevas oportunidades y colaboraciones. ¡No dudes en con
 
 * **LinkedIn:** [https://www.linkedin.com/in/hernan-lang](https://www.linkedin.com/in/hernan-lang)
 * **Email:** hernanluislang@gmail.com
-* **Mi CV Profesional:** [https://hll2975.github.io/M-Hoja-de-Vida-/](https://hll2975.github.io/M-Hoja-de-Vida-/)
-* **Mi Portafolio Profesional:** [https://hll2975.github.io/M-Portafolio-/](https://hll2975.github.io/M-Portafolio-/)
+* **Mi CV Profesional:** [https://hernan2975.github.io/M-Hoja-de-Vida-/](https://hernan2975.github.io/M-Hoja-de-Vida-/)
+* **Mi Portafolio Profesional:** [https://hernan2975.github.io/M-Portafolio-/](https://hernan2975.github.io/M-Portafolio-/)
 
 **Gracias por visitar mi portafolio.**
