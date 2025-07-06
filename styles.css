@@ -1,9 +1,106 @@
-/* === HERO === */
+ /* ===============================
+   🌐 FUENTES Y VARIABLES
+   =============================== */
+:root {
+  --primary-color: #007bff;
+  --accent-color: #28a745;
+  --secondary-color: #6c757d;
+  --bg-light: #f8f9fa;
+  --bg-dark: #343a40;
+  --text-dark: #222;
+  --text-light: #fff;
+  --shadow-soft: rgba(0,0,0,0.1);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/* ===============================
+   🔄 RESETEO BÁSICO
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===============================
+   🧭 NAVBAR
+   =============================== */
+.navbar {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px var(--shadow-soft);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--text-light);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   💡 HERO
+   =============================== */
 .hero {
   background: linear-gradient(135deg, var(--primary-color), #20c997);
   color: var(--text-light);
+  padding: 100px 20px;
   min-height: 80vh;
-  padding: 80px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,68 +108,254 @@
 }
 
 .hero-content {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.hero-header-personal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1100px;
-  gap: 30px;
+  gap: 20px;
 }
 
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+.hero-name {
   font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
-.hero-subtitle {
-  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+.hero-profession {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   opacity: 0.9;
-  margin-bottom: 20px;
 }
 
-.hero-intro {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: var(--text-light);
-  opacity: 0.95;
-}
-
-/* === IMAGEN CIRCULAR PROFESIONAL === */
-.hero-image {
-  width: 200px;
-  height: 200px;
+.hero-profile-pic {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
+  border: 5px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   object-fit: cover;
 }
 
-/* === DESKTOP: alineación lado a lado === */
-@media (min-width: 992px) {
+.hero-intro {
+  max-width: 800px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ===============================
+   🔘 BOTONES
+   =============================== */
+.btn {
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  box-shadow: 0 4px 8px var(--shadow-soft);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* ===============================
+   📁 SECCIONES
+   =============================== */
+.section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* ===============================
+   📐 LAYOUT GRID UNIVERSAL
+   =============================== */
+.project-grid,
+.skills-grid,
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.project-card,
+.skill-category,
+.education-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.project-img,
+.education-img {
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* ===============================
+   📮 FORMULARIO DE CONTACTO
+   =============================== */
+.contact-section .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 450px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-family: var(--font-body);
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   🦶 FOOTER
+   =============================== */
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+}
+
+.footer .social-links a {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  margin: 0 10px;
+}
+
+/* ===============================
+   📱 MEDIA QUERIES
+   =============================== */
+@media (min-width: 1024px) {
   .hero-content {
     flex-direction: row;
-    justify-content: space-between;
     text-align: left;
+    align-items: center;
+    gap: 50px;
   }
 
-  .hero-text {
-    flex: 2;
+  .hero-header-personal {
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
   }
 
-  .hero-image {
+  .hero-title-group {
     flex: 1;
-    max-width: 240px;
-    max-height: 240px;
+  }
+
+  .hero-image-container {
+    margin-left: 30px;
+  }
+
+  .hero-intro {
+    margin-top: 20px;
+  }
+}
+
+/* ===============================
+   🌙 MODO OSCURO
+   =============================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+  }
+
+  .project-card,
+  .skill-category,
+  .education-card,
+  .contact-form,
+  .contact-info {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+  }
+
+  a {
+    color: var(--accent-color);
   }
 }
