@@ -1,22 +1,20 @@
- /* ===============================
-   🌐 FUENTES Y VARIABLES
+/* ===============================
+   🌐 VARIABLES Y BASE
    =============================== */
 :root {
   --primary-color: #007bff;
-  --accent-color: #28a745;
   --secondary-color: #6c757d;
-  --bg-light: #f8f9fa;
-  --bg-dark: #343a40;
-  --text-dark: #222;
-  --text-light: #fff;
-  --shadow-soft: rgba(0,0,0,0.1);
+  --accent-color: #28a745;
+  --background-light: #f8f9fa;
+  --background-dark: #343a40;
+  --text-color-dark: #343a40;
+  --text-color-light: #ffffff;
+  --border-color: #dee2e6;
+  --shadow-light: rgba(0, 0, 0, 0.1);
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Roboto', sans-serif;
 }
 
-/* ===============================
-   🔄 RESETEO BÁSICO
-   =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -25,9 +23,9 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--text-dark);
-  background-color: var(--bg-light);
   line-height: 1.6;
+  color: var(--text-color-dark);
+  background-color: var(--background-light);
   scroll-behavior: smooth;
 }
 
@@ -39,19 +37,91 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
+}
+
+/* ===============================
+   📦 CONTENEDOR Y SECCIONES
+   =============================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 80px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* ===============================
+   🔘 BOTONES
+   =============================== */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95em;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
 }
 
 /* ===============================
    🧭 NAVBAR
    =============================== */
 .navbar {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--background-dark);
+  color: var(--text-color-light);
+  padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 999;
-  padding: 15px 0;
-  box-shadow: 0 2px 10px var(--shadow-soft);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar .container {
@@ -62,31 +132,33 @@ img {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  color: var(--text-light);
+  font-size: 1.8em;
+  color: var(--text-color-light);
+  font-weight: 700;
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
-  gap: 25px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links a {
-  color: var(--text-light);
-  font-weight: bold;
+  color: var(--text-color-light);
+  font-weight: 600;
+  padding: 5px 0;
   position: relative;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
-  width: 0;
   height: 2px;
-  background: var(--primary-color);
-  transition: 0.3s;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
 }
 
 .nav-links a:hover::after {
@@ -98,213 +170,84 @@ img {
    =============================== */
 .hero {
   background: linear-gradient(135deg, var(--primary-color), #20c997);
-  color: var(--text-light);
-  padding: 100px 20px;
+  color: var(--text-color-light);
   min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 100px 20px;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
+  gap: 30px;
+  max-width: 1000px;
 }
 
 .hero-header-personal {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
+  align-items: center;
 }
 
-.hero-name {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: bold;
-}
-
-.hero-profession {
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  opacity: 0.9;
+.hero-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .hero-profile-pic {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+.hero-title-group {
+  text-align: center;
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.hero-profession {
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  opacity: 0.9;
+}
+
 .hero-intro {
+  font-size: 1.2rem;
   max-width: 800px;
-  font-size: 1.1rem;
   opacity: 0.95;
+  margin-top: 20px;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 /* ===============================
-   🔘 BOTONES
-   =============================== */
-.btn {
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: 600;
-  font-family: var(--font-heading);
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-  box-shadow: 0 4px 8px var(--shadow-soft);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-}
-
-/* ===============================
-   📁 SECCIONES
-   =============================== */
-.section {
-  padding: 80px 20px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 4px;
-  width: 60px;
-  background-color: var(--primary-color);
-  border-radius: 2px;
-}
-
-/* ===============================
-   📐 LAYOUT GRID UNIVERSAL
+   🔀 GRIDS
    =============================== */
 .project-grid,
 .skills-grid,
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-}
-
-.project-card,
-.skill-category,
-.education-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.project-img,
-.education-img {
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-
-.tech-tag {
-  display: inline-block;
-  background-color: var(--secondary-color);
-  color: #fff;
-  font-size: 0.8rem;
-  padding: 5px 10px;
-  border-radius: 12px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-/* ===============================
-   📮 FORMULARIO DE CONTACTO
-   =============================== */
-.contact-section .contact-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.contact-form,
-.contact-info {
-  flex: 1 1 450px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  font-family: var(--font-body);
-}
-
-label {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 6px;
-}
-
-/* ===============================
-   🦶 FOOTER
-   =============================== */
-.footer {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer .social-links {
-  margin-top: 10px;
-}
-
-.footer .social-links a {
-  color: var(--text-light);
-  font-size: 1.3rem;
-  margin: 0 10px;
 }
 
 /* ===============================
@@ -313,32 +256,84 @@ label {
 @media (min-width: 1024px) {
   .hero-content {
     flex-direction: row;
+    justify-content: space-between;
     text-align: left;
-    align-items: center;
-    gap: 50px;
   }
 
   .hero-header-personal {
     flex-direction: row;
-    justify-content: start;
     align-items: center;
+    justify-content: start;
   }
 
   .hero-title-group {
-    flex: 1;
+    text-align: left;
+    flex: 2;
   }
 
   .hero-image-container {
-    margin-left: 30px;
+    flex: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-dark);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .burger div {
+    height: 3px;
+    background-color: var(--text-color-light);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-profession {
+    font-size: 1.4rem;
   }
 
   .hero-intro {
-    margin-top: 20px;
+    font-size: 1.05rem;
   }
 }
 
 /* ===============================
-   🌙 MODO OSCURO
+   🌙 DARK MODE
    =============================== */
 @media (prefers-color-scheme: dark) {
   body {
@@ -346,11 +341,10 @@ label {
     color: #f1f1f1;
   }
 
+  .section,
   .project-card,
   .skill-category,
-  .education-card,
-  .contact-form,
-  .contact-info {
+  .education-card {
     background-color: #2c2c2c;
     color: #f1f1f1;
   }
@@ -359,3 +353,4 @@ label {
     color: var(--accent-color);
   }
 }
+
