@@ -309,35 +309,150 @@ body {
 }
 
 /*📮 Formulario de contacto */
-.contact-section form {
-    max-width: 600px;
-    margin: auto;
+/* 📩 Sección contacto */
+.contact-section {
+  background-color: #fff;
+  padding: 60px 20px;
 }
-.contact-form .form-group {
-    margin-bottom: 20px;
+
+.contact-section .section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #005b9e;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
 }
-.contact-form label {
-    font-weight: 600;
+
+.contact-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #333;
 }
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+.contact-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.contact-form button {
-    background-color: #005b9e;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
+
+/* 📬 Formulario */
+.contact-form {
+  flex: 1 1 450px;
+  background-color: #f7f9fc;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.contact-form button:hover {
-    background-color: #00bcd4;
+
+.form-group {
+  margin-bottom: 20px;
 }
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #005b9e;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00bcd4;
+  outline: none;
+}
+
+.contact-form .btn-primary {
+  background-color: #005b9e;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #00aaff;
+}
+
+/* 🗂️ Datos de contacto */
+.contact-info {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #005b9e;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info ul li i {
+  margin-right: 10px;
+  color: #0095c9;
+  font-size: 1.2rem;
+}
+
+.contact-info ul li a {
+  color: #005b9e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive ajustes */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .contact-section .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+  }
+}
+
 
 /*🔚 Footer claro y simple */
 .footer {
