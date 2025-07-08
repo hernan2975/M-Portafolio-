@@ -385,6 +385,8 @@ body {
   margin-bottom: 12px;
 }
 
+
+
 .btn-link {
   display: inline-block;
   background-color: #e2f0fc;
@@ -425,7 +427,20 @@ body {
 .education-subsection {
   width: 100%;
 }
+.education-block {
+  margin-bottom: 60px;
+}
 
+.subsection-title {
+  font-size: 1.8rem;
+  margin: 40px 0 30px;
+  text-align: center;
+  color: #005b9e;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+    
 .education-section h3.section-title {
   font-size: 1.6rem;
   color: #0095c9;
