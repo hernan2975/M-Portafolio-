@@ -13,9 +13,10 @@ body {
 
 /*📱 Contenedor universal y fluidez responsiva */
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
 /*📌 Navbar elegante y fijo */
@@ -169,19 +170,14 @@ body {
 }
 
 .skills-grid {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
 }
 
 .skill-category {
-  flex: 1 1 400px;
-  background-color: #f7f9fc;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-  transition: transform 0.3s ease;
+  max-width: 100%;
+  min-height: 300px;
 }
 
 .skill-category:hover {
