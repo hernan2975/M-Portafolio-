@@ -215,6 +215,92 @@ body {
   font-weight: 600;
 }
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.education-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 20px 25px;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.education-info h3 {
+  font-size: 1.3rem;
+  color: #005b9e;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 8px;
+}
+
+.education-info p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.btn-link {
+  display: inline-block;
+  background-color: #e2f0fc;
+  color: #005b9e;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-link i {
+  margin-left: 6px;
+  color: #005b9e;
+}
+
+.btn-link:hover {
+  background-color: #cce4f8;
+  color: #003f72;
+}
+
+.education-section .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #003d6b;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 40px;
+}
+
+.education-section h3.section-title {
+  font-size: 1.6rem;
+  color: #0095c9;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 16px;
+  }
+
+  .education-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .education-info p {
+    font-size: 0.95rem;
+  }
+
+  .education-section .section-title {
+    font-size: 2rem;
+  }
+}
+
+
 /* 📱 Responsivo */
 @media (max-width: 768px) {
   .skills-grid {
