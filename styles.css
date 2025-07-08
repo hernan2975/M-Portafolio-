@@ -1,40 +1,46 @@
-/*🔄 Reset básico y tipografía clara */
+
+/* 📋 Reset y fuentes */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', 'Montserrat', sans-serif;
-    background-color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/*📱 Contenedor universal y fluidez responsiva */
+/* 📱 Contenedor global */
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-/*📌 Navbar elegante y fijo */
+/* 📌 Navbar profesional */
 .navbar {
-    background-color: #0c1e3c;
-    padding: 15px 30px;
+    background-color: #2b4e72;
+    padding: 15px 25px;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 .nav-links {
-    list-style: none;
     display: flex;
     gap: 20px;
+}
+.nav-links li {
+    list-style: none;
 }
 .nav-links li a {
     color: #fff;
@@ -42,18 +48,19 @@ body {
     font-weight: 500;
 }
 .nav-links li a:hover {
-    color: #00bcd4;
+    color: #e2eaf3;
 }
 
-/*👤 Hero section bien jerarquizada y estética */
+/* 👤 Hero estilizado */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #003f72, #00a4c7);
+    background: linear-gradient(to right, #2b4e72, #0095c9);
     color: #fff;
+    text-align: center;
+    padding: 80px 20px;
 }
 .hero-name {
-    font-size: 2.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
     font-weight: 700;
 }
 .hero-profession {
@@ -62,12 +69,13 @@ body {
     margin-bottom: 20px;
 }
 .hero-profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    margin: 20px auto;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin: 25px auto;
 }
 .hero-intro {
     max-width: 800px;
@@ -76,60 +84,60 @@ body {
     padding: 20px 0;
 }
 .hero-actions .btn {
-    display: inline-block;
     margin: 10px;
-    padding: 12px 22px;
+    padding: 12px 24px;
     border-radius: 5px;
+    border: 2px solid #fff;
     font-weight: 600;
     text-decoration: none;
-    border: 2px solid #fff;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 .btn-primary {
     background-color: #fff;
-    color: #005b9e;
+    color: #2b4e72;
 }
 .btn-secondary {
     background-color: transparent;
     color: #fff;
 }
 .btn:hover {
-    background-color: #00bcd4;
-    color: #fff;
-    border-color: #00bcd4;
+    background-color: #e2eaf3;
+    color: #2b4e72;
 }
 
-/*📂 Secciones generales */
+/* 📂 Secciones */
 .section {
     padding: 60px 20px;
 }
 .section-title {
-    font-size: 2rem;
-    color: #005b9e;
-    margin-bottom: 30px;
     text-align: center;
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #2b4e72;
+    margin-bottom: 40px;
 }
 
-/*🧩 Tarjetas de proyecto */
+/* 🧩 Grid de proyectos */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 .project-card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
     transition: transform 0.3s ease;
 }
 .project-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
 }
 .project-img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .project-info {
     padding: 20px;
@@ -137,7 +145,7 @@ body {
 .project-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #003f72;
+    color: #2b4e72;
 }
 .project-description {
     font-size: 0.95rem;
@@ -145,96 +153,75 @@ body {
 }
 .tech-tag {
     display: inline-block;
-    background-color: #e0f7fa;
-    color: #00796b;
+    background-color: #e2eaf3;
+    color: #2b4e72;
     font-size: 0.8rem;
     margin: 4px 2px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 20px;
 }
-.project-actions .btn-link {
+.btn-link {
     display: inline-block;
-    color: #007aff;
-    font-weight: bold;
+    color: #0095c9;
+    font-weight: 600;
     margin-top: 10px;
     text-decoration: none;
 }
-.project-actions .btn-link:hover {
-    color: #00a4c7;
+.btn-link:hover {
+    color: #2b4e72;
 }
 
-/*📮 Formulario de contacto */
-.contact-section form {
-    max-width: 600px;
-    margin: auto;
-}
-.contact-form .form-group {
-    margin-bottom: 20px;
-}
-.contact-form label {
-    font-weight: 600;
+/* 📞 Contacto */
+.contact-section {
+    background-color: #fff;
+    padding: 60px 20px;
 }
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 10px;
+    margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 .contact-form button {
-    background-color: #005b9e;
+    background-color: #2b4e72;
     color: #fff;
-    padding: 12px 20px;
     border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
 }
 .contact-form button:hover {
-    background-color: #00bcd4;
+    background-color: #0095c9;
 }
 
-/*🔚 Footer claro y simple */
+/* 🔚 Footer */
 .footer {
-    background-color: #0c1e3c;
-    color: #ddd;
+    background-color: #2b4e72;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     font-size: 0.9rem;
 }
 
-/*📱 Responsividad extendida */
+/* 📱 Mobile adaptabilidad */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        position: absolute;
-        background-color: #0c1e3c;
-        top: 60px;
-        width: 100%;
         display: none;
     }
-
     .burger {
         display: block;
         cursor: pointer;
     }
-
-    .burger div {
-        width: 25px;
-        height: 3px;
-        margin: 4px;
-        background-color: #fff;
-    }
-
     #nav-links.show {
         display: flex;
-        flex-direction: column;
     }
-
     .hero-name {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
-
     .hero-profession {
         font-size: 1.2rem;
     }
