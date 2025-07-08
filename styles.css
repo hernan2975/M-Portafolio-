@@ -1,81 +1,74 @@
-
-/* 📋 Reset y fuentes */
+/* ✨ Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
 
-/* 📱 Contenedor global */
+/* 📐 Contenedor */
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-/* 📌 Navbar profesional */
+/* 🧭 Navbar */
 .navbar {
-    background-color: #2b4e72;
-    padding: 15px 25px;
+    background-color: #1a1a1a;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 18px 30px;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 .navbar .logo {
+    font-weight: 700;
     font-size: 1.6rem;
-    font-weight: bold;
 }
 .nav-links {
-    display: flex;
-    gap: 20px;
-}
-.nav-links li {
     list-style: none;
+    display: flex;
+    gap: 24px;
 }
 .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.05rem;
 }
 .nav-links li a:hover {
-    color: #e2eaf3;
+    color: #00aaff;
 }
 
-/* 👤 Hero estilizado */
+/* 🦸 Hero */
 .hero {
-    background: linear-gradient(to right, #2b4e72, #0095c9);
+    background: linear-gradient(to right, #005b9e, #00bcd4);
     color: #fff;
-    text-align: center;
     padding: 80px 20px;
+    text-align: center;
 }
 .hero-name {
-    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 700;
 }
 .hero-profession {
     font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
 .hero-profile-pic {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    margin: 25px auto;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    margin: 30px auto;
 }
 .hero-intro {
     max-width: 800px;
@@ -84,40 +77,44 @@ body {
     padding: 20px 0;
 }
 .hero-actions .btn {
+    display: inline-block;
     margin: 10px;
-    padding: 12px 24px;
+    padding: 14px 26px;
     border-radius: 5px;
-    border: 2px solid #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
+    font-size: 1rem;
 }
 .btn-primary {
-    background-color: #fff;
-    color: #2b4e72;
+    background-color: #ffffff;
+    color: #005b9e;
+    border: 2px solid #fff;
 }
 .btn-secondary {
     background-color: transparent;
     color: #fff;
+    border: 2px solid #fff;
 }
 .btn:hover {
-    background-color: #e2eaf3;
-    color: #2b4e72;
+    background-color: #00aaff;
+    color: #fff;
+    border-color: #00aaff;
 }
 
-/* 📂 Secciones */
+/* 🧱 Secciones */
 .section {
     padding: 60px 20px;
 }
 .section-title {
+    font-size: 2.4rem;
+    color: #005b9e;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 2.2rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #2b4e72;
-    margin-bottom: 40px;
+    font-weight: 600;
 }
 
-/* 🧩 Grid de proyectos */
+/* 🗂️ Proyectos */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,7 +123,7 @@ body {
 .project-card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 .project-card:hover {
@@ -134,95 +131,92 @@ body {
 }
 .project-img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 .project-info {
     padding: 20px;
 }
 .project-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    color: #005b9e;
+    margin-bottom: 10px;
     font-weight: 600;
-    color: #2b4e72;
 }
 .project-description {
-    font-size: 0.95rem;
-    margin: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #444;
 }
 .tech-tag {
     display: inline-block;
-    background-color: #e2eaf3;
-    color: #2b4e72;
-    font-size: 0.8rem;
-    margin: 4px 2px;
-    padding: 6px 12px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-size: 0.85rem;
+    margin: 3px;
+    padding: 5px 10px;
     border-radius: 20px;
 }
 .btn-link {
-    display: inline-block;
-    color: #0095c9;
+    color: #005b9e;
     font-weight: 600;
-    margin-top: 10px;
     text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
 }
 .btn-link:hover {
-    color: #2b4e72;
+    color: #00aaff;
 }
 
-/* 📞 Contacto */
-.contact-section {
-    background-color: #fff;
-    padding: 60px 20px;
-}
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.contact-form button {
-    background-color: #2b4e72;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.contact-form button:hover {
-    background-color: #0095c9;
-}
-
-/* 🔚 Footer */
+/* 📮 Footer */
 .footer {
-    background-color: #2b4e72;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 30px 20px;
     text-align: center;
-    padding: 30px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* 📱 Mobile adaptabilidad */
+/* 📱 Responsive */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
         display: none;
     }
+
     .burger {
-        display: block;
         cursor: pointer;
+        display: block;
     }
+
+    .burger .line1,
+    .burger .line2,
+    .burger .line3 {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+    }
+
     #nav-links.show {
         display: flex;
     }
+
     .hero-name {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
+
     .hero-profession {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
+
