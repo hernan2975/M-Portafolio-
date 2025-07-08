@@ -162,6 +162,69 @@ body {
 .project-actions .btn-link:hover {
     color: #00a4c7;
 }
+/* 🧠 Estilo para la sección de habilidades */
+.skills-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-category {
+  flex: 1 1 400px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  font-size: 1.4rem;
+  color: #005b9e;
+  margin-bottom: 15px;
+  border-left: 4px solid #00bcd4;
+  padding-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.skill-category h3 i {
+  margin-right: 6px;
+  color: #0077b6;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-category li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.skill-category strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .skills-grid {
+    flex-direction: column;
+  }
+}
 
 /*📮 Formulario de contacto */
 .contact-section form {
