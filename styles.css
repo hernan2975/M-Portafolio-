@@ -363,6 +363,18 @@ body {
   margin-bottom: 40px;
 }
 
+.subsection-title {
+  font-size: 1.8rem;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #005b9e;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+.education-subsection {
+  width: 100%;
+}
+
 .education-section h3.section-title {
   font-size: 1.6rem;
   color: #0095c9;
