@@ -21,30 +21,78 @@ body {
 
 /*📌 Navbar elegante y fijo */
 .navbar {
-    background-color: #0c1e3c;
-    padding: 15px 30px;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
+
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
 }
+
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 24px;
 }
+
 .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1rem;
 }
+
 .nav-links li a:hover {
-    color: #00bcd4;
+  color: #00bcd4;
 }
+
+/* 🍔 Menú hamburguesa */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* 📱 Responsive mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
 
 /*👤 Hero section bien jerarquizada y estética */
 .hero {
