@@ -456,12 +456,42 @@ body {
 
 /*🔚 Footer claro y simple */
 .footer {
-    background-color: #0c1e3c;
-    color: #ddd;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: #ddd;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95rem;
 }
+
+.footer p {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #00bcd4;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.social-links a i {
+  transition: transform 0.3s ease;
+}
+.social-links a:hover i {
+  transform: scale(1.2);
+}
+
 
 /*📱 Responsividad extendida */
 @media (max-width: 768px) {
