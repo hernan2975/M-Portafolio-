@@ -48,57 +48,97 @@ body {
 
 /*👤 Hero section bien jerarquizada y estética */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #003f72, #00a4c7);
-    color: #fff;
+  background: linear-gradient(to right, #005b9e, #00bcd4);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
 }
+
 .hero-name {
-    font-size: 2.8rem;
-    font-weight: 700;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .hero-profession {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .hero-profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    margin: 20px auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  margin: 30px auto;
 }
+
 .hero-intro {
-    max-width: 800px;
-    margin: auto;
-    font-size: 1.1rem;
-    padding: 20px 0;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  padding: 20px 0;
+  color: #f1f1f1;
+  line-height: 1.7;
 }
+
+.hero-actions {
+  margin-top: 30px;
+}
+
 .hero-actions .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 22px;
-    border-radius: 5px;
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid #fff;
-    transition: background 0.3s ease;
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #fff;
+  transition: background 0.3s ease;
+  font-size: 1rem;
 }
+
 .btn-primary {
-    background-color: #fff;
-    color: #005b9e;
+  background-color: #fff;
+  color: #005b9e;
 }
+
 .btn-secondary {
-    background-color: transparent;
-    color: #fff;
+  background-color: transparent;
+  color: #fff;
 }
+
 .btn:hover {
-    background-color: #00bcd4;
-    color: #fff;
-    border-color: #00bcd4;
+  background-color: #00aaff;
+  color: #fff;
+  border-color: #00aaff;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.4rem;
+  }
+
+  .hero-profession {
+    font-size: 1.3rem;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .hero-profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 
 /*📂 Secciones generales */
 .section {
