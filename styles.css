@@ -1,4 +1,4 @@
-/* ✨ Reset básico */
+/*🔄 Reset básico y tipografía clara */
 * {
     margin: 0;
     padding: 0;
@@ -6,69 +6,68 @@
 }
 body {
     font-family: 'Roboto', 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #fafafa;
     color: #333;
     line-height: 1.6;
 }
 
-/* 📐 Contenedor */
+/*📱 Contenedor universal y fluidez responsiva */
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-/* 🧭 Navbar */
+/*📌 Navbar elegante y fijo */
 .navbar {
-    background-color: #1a1a1a;
+    background-color: #0c1e3c;
+    padding: 15px 30px;
     color: #fff;
-    padding: 18px 30px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 .navbar .logo {
-    font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 20px;
 }
 .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.05rem;
 }
 .nav-links li a:hover {
-    color: #00aaff;
+    color: #00bcd4;
 }
 
-/* 🦸 Hero */
+/*👤 Hero section bien jerarquizada y estética */
 .hero {
-    background: linear-gradient(to right, #005b9e, #00bcd4);
-    color: #fff;
-    padding: 80px 20px;
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #003f72, #00a4c7);
+    color: #fff;
 }
 .hero-name {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
 }
 .hero-profession {
     font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 .hero-profile-pic {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    margin: 30px auto;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin: 20px auto;
 }
 .hero-intro {
     max-width: 800px;
@@ -79,144 +78,165 @@ body {
 .hero-actions .btn {
     display: inline-block;
     margin: 10px;
-    padding: 14px 26px;
+    padding: 12px 22px;
     border-radius: 5px;
     font-weight: 600;
     text-decoration: none;
+    border: 2px solid #fff;
     transition: background 0.3s ease;
-    font-size: 1rem;
 }
 .btn-primary {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #005b9e;
-    border: 2px solid #fff;
 }
 .btn-secondary {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
 }
 .btn:hover {
-    background-color: #00aaff;
+    background-color: #00bcd4;
     color: #fff;
-    border-color: #00aaff;
+    border-color: #00bcd4;
 }
 
-/* 🧱 Secciones */
+/*📂 Secciones generales */
 .section {
     padding: 60px 20px;
 }
 .section-title {
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: #005b9e;
     margin-bottom: 30px;
     text-align: center;
-    font-weight: 600;
 }
 
-/* 🗂️ Proyectos */
+/*🧩 Tarjetas de proyecto */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 .project-card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
     transition: transform 0.3s ease;
 }
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
 }
 .project-img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
 .project-info {
     padding: 20px;
 }
 .project-title {
-    font-size: 1.4rem;
-    color: #005b9e;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
     font-weight: 600;
+    color: #003f72;
 }
 .project-description {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #444;
+    font-size: 0.95rem;
+    margin: 10px 0;
 }
 .tech-tag {
     display: inline-block;
     background-color: #e0f7fa;
     color: #00796b;
-    font-size: 0.85rem;
-    margin: 3px;
-    padding: 5px 10px;
+    font-size: 0.8rem;
+    margin: 4px 2px;
+    padding: 6px 10px;
     border-radius: 20px;
 }
-.btn-link {
-    color: #005b9e;
-    font-weight: 600;
+.project-actions .btn-link {
+    display: inline-block;
+    color: #007aff;
+    font-weight: bold;
+    margin-top: 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 0.95rem;
 }
-.btn-link:hover {
-    color: #00aaff;
+.project-actions .btn-link:hover {
+    color: #00a4c7;
 }
 
-/* 📮 Footer */
+/*📮 Formulario de contacto */
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+}
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+.contact-form label {
+    font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    background-color: #005b9e;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.contact-form button:hover {
+    background-color: #00bcd4;
+}
+
+/*🔚 Footer claro y simple */
 .footer {
-    background-color: #1a1a1a;
-    color: #ccc;
-    padding: 30px 20px;
+    background-color: #0c1e3c;
+    color: #ddd;
     text-align: center;
-    font-size: 1rem;
+    padding: 20px;
+    font-size: 0.9rem;
 }
 
-/* 📱 Responsive */
+/*📱 Responsividad extendida */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        background-color: #1a1a1a;
         position: absolute;
+        background-color: #0c1e3c;
         top: 60px;
-        left: 0;
         width: 100%;
         display: none;
     }
 
     .burger {
-        cursor: pointer;
         display: block;
+        cursor: pointer;
     }
 
-    .burger .line1,
-    .burger .line2,
-    .burger .line3 {
+    .burger div {
         width: 25px;
         height: 3px;
+        margin: 4px;
         background-color: #fff;
-        margin: 5px;
     }
 
     #nav-links.show {
         display: flex;
+        flex-direction: column;
     }
 
     .hero-name {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
     .hero-profession {
-        font-size: 1.3rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 }
 
