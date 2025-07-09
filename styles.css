@@ -221,64 +221,165 @@ textarea {
 }
 
 /*👤 Hero */
+/*👤 Hero Section - Mejorada con Efectos y Full Responsive */
 .hero {
-  background: linear-gradient(to right, #005b9e, #00bcd4);
+  background: linear-gradient(135deg, #005b9e 0%, #00bcd4 100%);
   color: #fff;
-  padding: 80px 20px;
+  padding: clamp(4rem, 10vw, 8rem) var(--container-padding);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Efecto de burbujas decorativas */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.3;
+  animation: bubbles 60s linear infinite;
+}
+
+@keyframes bubbles {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .hero-name {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.8s ease-out;
 }
+
 .hero-profession {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
+
 .hero-profile-pic {
-  width: 180px;
-  height: 180px;
+  width: clamp(150px, 25vw, 220px);
+  height: clamp(150px, 25vw, 220px);
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  margin: 30px auto;
+  border: 4px solid rgba(255,255,255,0.8);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  margin: 2rem auto;
+  transition: all 0.4s ease;
+  animation: fadeIn 0.8s ease-out 0.4s both;
 }
+
+.hero-profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  border-color: #fff;
+}
+
 .hero-intro {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.1rem;
-  padding: 20px 0;
-  color: #f1f1f1;
+  max-width: min(800px, 90%);
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  padding: 1rem 0;
+  color: rgba(241,241,241,0.95);
   line-height: 1.7;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
 }
+
 .hero-actions {
-  margin-top: 30px;
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s ease-out 0.8s both;
 }
+
 .hero-actions .btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 14px 28px;
-  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
   border: 2px solid #fff;
-  transition: background 0.3s ease;
-  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  min-width: 180px;
 }
+
 .btn-primary {
   background-color: #fff;
   color: #005b9e;
 }
+
 .btn-secondary {
   background-color: transparent;
   color: #fff;
 }
+
 .btn:hover {
-  background-color: #00aaff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  background-color: #005b9e;
   color: #fff;
-  border-color: #00aaff;
+  border-color: #005b9e;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 250px;
+  }
 }
 
 /*📂 Secciones generales */
