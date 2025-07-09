@@ -1,28 +1,24 @@
-/*🔄 Reset básico y tipografía clara */
+/*🔄 Reset básico y tipografía */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
-body {
-    font-family: 'Montserrat', 'Roboto', sans-serif;
-    background-color: #fafafa;
-    color: #333;
-    line-height: 1.6;
-}
-
 html, body {
   height: 100%;
 }
+body {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
 
-
-/*📱 Contenedor universal y fluidez responsiva */
+/*📦 Contenedor universal */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -30,7 +26,7 @@ html, body {
   padding: 20px;
 }
 
-/*📌 Navbar elegante y fijo */
+/*📌 Navbar fijo y responsivo */
 .navbar {
   background-color: #1a1a1a;
   color: #fff;
@@ -42,20 +38,17 @@ html, body {
   top: 0;
   z-index: 999;
 }
-
 .navbar .logo {
   font-weight: 700;
   font-size: 1.6rem;
   color: #fff;
   text-decoration: none;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 24px;
 }
-
 .nav-links li a {
   color: #fff;
   text-decoration: none;
@@ -63,7 +56,6 @@ html, body {
   transition: color 0.3s ease;
   font-size: 1rem;
 }
-
 .nav-links li a:hover {
   color: #00bcd4;
 }
@@ -73,7 +65,6 @@ html, body {
   display: none;
   cursor: pointer;
 }
-
 .burger div {
   width: 25px;
   height: 3px;
@@ -82,50 +73,22 @@ html, body {
   transition: all 0.3s ease;
 }
 
-/* 📱 Responsive mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #1a1a1a;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    display: none;
-    padding: 20px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .burger {
-    display: block;
-  }
-}
-
-
-/*👤 Hero section bien jerarquizada y estética */
+/*👤 Hero */
 .hero {
   background: linear-gradient(to right, #005b9e, #00bcd4);
   color: #fff;
   padding: 80px 20px;
   text-align: center;
 }
-
 .hero-name {
   font-size: 3rem;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
 }
-
 .hero-profession {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
 }
-
 .hero-profile-pic {
   width: 180px;
   height: 180px;
@@ -135,7 +98,6 @@ html, body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   margin: 30px auto;
 }
-
 .hero-intro {
   max-width: 800px;
   margin: auto;
@@ -144,11 +106,9 @@ html, body {
   color: #f1f1f1;
   line-height: 1.7;
 }
-
 .hero-actions {
   margin-top: 30px;
 }
-
 .hero-actions .btn {
   display: inline-block;
   margin: 10px;
@@ -160,78 +120,42 @@ html, body {
   transition: background 0.3s ease;
   font-size: 1rem;
 }
-
 .btn-primary {
   background-color: #fff;
   color: #005b9e;
 }
-
 .btn-secondary {
   background-color: transparent;
   color: #fff;
 }
-
 .btn:hover {
   background-color: #00aaff;
   color: #fff;
   border-color: #00aaff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-name {
-    font-size: 2.4rem;
-  }
-
-  .hero-profession {
-    font-size: 1.3rem;
-  }
-
-  .hero-intro {
-    font-size: 1rem;
-    padding: 10px 0;
-  }
-
-  .hero-profile-pic {
-    width: 140px;
-    height: 140px;
-  }
-}
-
-
 /*📂 Secciones generales */
 .section {
-    padding: 60px 20px;
-}
-.section-title {
-    font-size: 2rem;
-    color: #005b9e;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/*🧩 Tarjetas de proyecto */
-.project-grid {
-.projects-section {
   padding: 60px 20px;
-  background-color: #f7f9fc;
 }
-
 .section-title {
   font-size: 2.4rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 50px;
-  color: #003d6b;
+  margin-bottom: 40px;
+  color: #005b9e;
   font-family: 'Montserrat', sans-serif;
 }
 
+/*🧩 Proyectos */
+.projects-section {
+  background-color: #f7f9fc;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
-
 .project-card {
   background-color: #fff;
   border-radius: 12px;
@@ -239,11 +163,9 @@ html, body {
   overflow: hidden;
   transition: transform 0.3s ease;
 }
-
 .project-card:hover {
   transform: translateY(-6px);
 }
-
 .project-img {
   width: 100%;
   height: 200px;
@@ -251,29 +173,21 @@ html, body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
-
 .project-info {
   padding: 20px;
 }
-
 .project-title {
   font-size: 1.3rem;
   font-weight: 600;
   color: #005b9e;
   margin-bottom: 10px;
 }
-
 .project-description {
   font-size: 1rem;
   color: #444;
   margin-bottom: 12px;
   line-height: 1.5;
 }
-
-.project-tech-tags {
-  margin-bottom: 15px;
-}
-
 .tech-tag {
   display: inline-block;
   background-color: #e0f0ff;
@@ -283,7 +197,6 @@ html, body {
   border-radius: 20px;
   margin: 3px;
 }
-
 .project-actions .btn-link {
   display: inline-block;
   color: #005b9e;
@@ -293,113 +206,96 @@ html, body {
   margin-right: 12px;
   transition: color 0.3s ease;
 }
-
 .project-actions .btn-link:hover {
   color: #00aaff;
 }
 
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .project-title {
-    font-size: 1.2rem;
-  }
-
-  .project-description {
-    font-size: 0.95rem;
-  }
-}
-
-/* 🧠 Estilo para la sección de habilidades */
+/*🧠 Habilidades */
 .skills-section {
-  background-color: #ffffff;
-  padding: 60px 20px;
+  background-color: #fff;
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
 }
-
 .skill-category {
-  max-width: 100%;
-  min-height: 300px;
+  background-color: #f7f9fc;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
 }
-
 .skill-category:hover {
   transform: translateY(-5px);
 }
-
 .skill-category h3 {
   font-size: 1.4rem;
   color: #005b9e;
   margin-bottom: 15px;
   border-left: 4px solid #00bcd4;
   padding-left: 10px;
-  font-family: 'Montserrat', sans-serif;
 }
-
 .skill-category h3 i {
   margin-right: 6px;
   color: #0077b6;
 }
-
 .skill-category ul {
   list-style: none;
   padding-left: 0;
 }
-
 .skill-category li {
   margin-bottom: 12px;
   font-size: 1rem;
   color: #333;
   line-height: 1.5;
 }
-
 .skill-category strong {
   color: #222;
   font-weight: 600;
 }
 
+/*🎓 Educación */
+.education-section {
+  background-color: #fff;
+}
+.education-block {
+  margin-bottom: 60px;
+}
+.subsection-title {
+  font-size: 1.8rem;
+  margin: 40px 0 30px;
+  text-align: center;
+  color: #005b9e;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
-
 .education-card {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
   padding: 20px 25px;
   transition: transform 0.3s ease;
 }
-
 .education-card:hover {
   transform: translateY(-5px);
 }
-
 .education-info h3 {
   font-size: 1.3rem;
   color: #005b9e;
-  font-family: 'Montserrat', sans-serif;
   margin-bottom: 8px;
 }
-
 .education-info p {
   font-size: 1rem;
   color: #444;
   margin-bottom: 12px;
 }
-
-
-
 .btn-link {
-  display: inline-block;
   background-color: #e2f0fc;
   color: #005b9e;
   padding: 10px 16px;
@@ -408,319 +304,22 @@ html, body {
   font-weight: 600;
   transition: background 0.3s ease;
 }
-
 .btn-link i {
   margin-left: 6px;
-  color: #005b9e;
 }
-
 .btn-link:hover {
   background-color: #cce4f8;
   color: #003f72;
 }
 
-.education-section .section-title {
-  text-align: center;
-  font-size: 2.4rem;
-  color: #003d6b;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 40px;
-}
-
-.subsection-title {
-  font-size: 1.8rem;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  color: #005b9e;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-}
-.education-subsection {
-  width: 100%;
-}
-.education-block {
-  margin-bottom: 60px;
-}
-
-.subsection-title {
-  font-size: 1.8rem;
-  margin: 40px 0 30px;
-  text-align: center;
-  color: #005b9e;
-  font-family: 'Montserrat', sans-serif;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-}
-    
-.education-section h3.section-title {
-  font-size: 1.6rem;
-  color: #0095c9;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-  .education-card {
-    padding: 16px;
-  }
-
-  .education-info h3 {
-    font-size: 1.2rem;
-  }
-
-  .education-info p {
-    font-size: 0.95rem;
-  }
-
-  .education-section .section-title {
-    font-size: 2rem;
-  }
-}
-
-
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-  .skills-grid {
-    flex-direction: column;
-  }
-}
-
-/*📮 Formulario de contacto */
-/* 📩 Sección contacto */
+/*📮 Contacto */
 .contact-section {
   background-color: #fff;
   padding: 60px 20px;
 }
-
-.contact-section .section-title {
-  font-size: 2.2rem;
-  text-align: center;
-  color: #005b9e;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 10px;
-}
-
 .contact-intro {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
   font-size: 1.1rem;
   color: #333;
-}
-
-.contact-content {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* 📬 Formulario */
-.contact-form {
-  flex: 1 1 450px;
-  background-color: #f7f9fc;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #005b9e;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #fff;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #00bcd4;
-  outline: none;
-}
-
-.contact-form .btn-primary {
-  background-color: #005b9e;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form .btn-primary:hover {
-  background-color: #00aaff;
-}
-
-/* 🗂️ Datos de contacto */
-.contact-info {
-  flex: 1 1 300px;
-  padding: 20px;
-}
-
-.contact-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #005b9e;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.contact-info ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.contact-info ul li {
-  margin-bottom: 14px;
-  font-size: 1rem;
-  color: #333;
-  display: flex;
-  align-items: center;
-}
-
-.contact-info ul li i {
-  margin-right: 10px;
-  color: #0095c9;
-  font-size: 1.2rem;
-}
-
-.contact-info ul li a {
-  color: #005b9e;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-info ul li a:hover {
-  text-decoration: underline;
-}
-
-/* 📱 Responsive ajustes */
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-  }
-
-  .contact-form,
-  .contact-info {
-    flex: 1 1 100%;
-  }
-
-  .contact-section .section-title {
-    font-size: 2rem;
-  }
-
-  .contact-intro {
-    font-size: 1rem;
-  }
-}
-
-
-/*🔚 Footer claro y simple */
-.footer {
-  background-color: #1a1a1a;
-  color: #ddd;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-.footer p {
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.social-links a {
-  color: #00bcd4;
-  font-size: 1.4rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #fff;
-}
-
-.social-links a i {
-  transition: transform 0.3s ease;
-}
-.social-links a:hover i {
-  transform: scale(1.2);
-}
-
-
-/*📱 Responsividad extendida */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        position: absolute;
-        background-color: #0c1e3c;
-        top: 60px;
-        width: 100%;
-        display: none;
-    }
-
-    .nav-links {
-        position: absolute;
-        left: 0;
-        z-index: 1000;
-         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-     }
-    
-     .nav-links li {
-          padding: 12px 20px;
-          text-align: left;
-     }
-
-    .nav-links {
-          transition: max-height 0.3s ease;
-          overflow: hidden;
-     }
-
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .burger div {
-        width: 25px;
-        height: 3px;
-        margin: 4px;
-        background-color: #fff;
-    }
-
-    #nav-links.show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-name {
-        font-size: 2.2rem;
-    }
-
-    .hero-profession {
-        font-size: 1.2rem;
-    }
-}
-
