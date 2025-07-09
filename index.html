@@ -30,23 +30,27 @@
         </div>
     </header>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#home" class="logo">Hernán Lang</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="burger" id="burger-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </nav>
+    
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+  <div class="container">
+    <a href="#home" class="logo">Hernán Lang</a>
+
+    <div class="burger" id="burger-menu" aria-label="Abrir menú" role="button" tabindex="0">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
 
     <main class="container">
         <section id="proyectos" class="section projects-section">
