@@ -337,15 +337,16 @@ body {
 .footer .container {
   max-width: 1200px;
   margin: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .footer p {
   margin-bottom: 12px;
   font-weight: 500;
+  width: 100%;
   text-align: center;
 }
 
@@ -359,8 +360,9 @@ body {
 
 .social-links a {
   color: #00bcd4;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .social-links a:hover {
