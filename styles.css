@@ -670,6 +670,23 @@ body {
         display: none;
     }
 
+    .nav-links {
+        position: absolute;
+        left: 0;
+        z-index: 1000;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+     }
+    
+     .nav-links li {
+          padding: 12px 20px;
+          text-align: left;
+     }
+
+    .nav-links {
+          transition: max-height 0.3s ease;
+          overflow: hidden;
+     }
+
     .burger {
         display: block;
         cursor: pointer;
