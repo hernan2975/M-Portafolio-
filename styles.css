@@ -413,18 +413,21 @@ textarea {
 }
 
 /*🧩 Proyectos */
-/*🧩 Proyectos - Versión Premium */
+/* 🧩 Proyectos - Versión Premium CORREGIDO */
 .projects-section {
   background-color: #f7f9fc;
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(0, 188, 212, 0.03) 0%, transparent 20%),
     radial-gradient(circle at 90% 80%, rgba(0, 91, 158, 0.03) 0%, transparent 20%);
+  padding: 4rem 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -436,6 +439,7 @@ textarea {
   position: relative;
 }
 
+/* SOLUCIÓN PRINCIPAL: pointer-events:none permite clicks */
 .project-card::before {
   content: '';
   position: absolute;
@@ -446,6 +450,8 @@ textarea {
   background: linear-gradient(135deg, rgba(0, 91, 158, 0.1) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none; /* ← Esto soluciona el problema */
+  z-index: 1;
 }
 
 .project-card:hover {
@@ -470,6 +476,8 @@ textarea {
 
 .project-info {
   padding: clamp(1.2rem, 3vw, 1.8rem);
+  position: relative; /* Capa superior */
+  z-index: 2;
 }
 
 .project-title {
@@ -486,7 +494,7 @@ textarea {
   line-height: 1.6;
 }
 
-.tech-tags {
+.project-tech-tags { /* Corregido el nombre (antes era solo .tech-tags) */
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -514,11 +522,14 @@ textarea {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  position: relative; /* Importante para z-index */
 }
 
-.project-actions .btn-link {
+/* Estilos corregidos para el botón (antes .btn-link) */
+.project-actions .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   color: #005b9e;
   font-weight: 600;
   text-decoration: none;
@@ -527,20 +538,24 @@ textarea {
   border-radius: 6px;
   transition: all 0.3s ease;
   background-color: rgba(0, 91, 158, 0.08);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  z-index: 3; /* Asegura que esté sobre todo */
 }
 
-.project-actions .btn-link:hover {
+.project-actions .btn:hover {
   background-color: rgba(0, 91, 158, 0.15);
   color: #003f72;
   transform: translateY(-2px);
 }
 
-.project-actions .btn-link i {
-  margin-left: 0.5rem;
+.project-actions .btn i {
+  margin-right: 0.5rem; /* Mejor icono a la izquierda */
   transition: transform 0.3s ease;
 }
 
-.project-actions .btn-link:hover i {
+.project-actions .btn:hover i {
   transform: translateX(3px);
 }
 
