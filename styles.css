@@ -1,29 +1,71 @@
 /*🔄 Reset básico y tipografía */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-html, body {
-  height: 100%;
-}
-body {
-  font-family: 'Montserrat', 'Roboto', sans-serif;
-  background-color: #fafafa;
-  color: #333;
-  line-height: 1.6;
+/*🔄 Reset mejorado y tipografía */
+:root {
+  --main-font: 'Montserrat', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --text-color: #333;
+  --bg-color: #fafafa;
+  --container-padding: clamp(1rem, 3vw, 2rem);
 }
 
-/*📦 Contenedor universal */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* Mejor herencia para box-sizing */
+}
+
+html {
+  font-size: 100%; /* 16px por defecto pero más accesible */
+  scroll-behavior: smooth;
+  box-sizing: border-box; /* Aplicamos box-sizing aquí para heredarlo */
+  -webkit-text-size-adjust: 100%; /* Previene ajuste de texto en iOS */
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh; /* Mejor que height: 100% */
+  display: flex; /* Para mejor manejo del footer */
+  flex-direction: column;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*📦 Contenedor universal mejorado */
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative; /* Para elementos hijos posicionados */
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Corrección para imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Normalización de elementos interactivos */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /*📌 Navbar fijo y responsivo */
